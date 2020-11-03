@@ -2,10 +2,13 @@ import Home from './Containers/Home'
 import './App.css';
 
 function App() {
-  return (
+    return (
+        <BrowserRouter>
 
-      <Home></Home>
-  );
+            <Home></Home>
+
+        </BrowserRouter>
+    );
 }
 
 export default App;
