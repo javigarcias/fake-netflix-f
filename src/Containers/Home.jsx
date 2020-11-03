@@ -6,8 +6,10 @@ export default function Home () {
 
     return(
 
-
-        <div>SOY HOME</div>
+        
+        <div className="mainHome">
+            <img className="backNetflix" src="Images/netflix-homepage.jpg"></img>
+        </div>
 
 
 
