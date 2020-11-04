@@ -10,4 +10,9 @@
 	padding: 0.5em 1em;
 
 	border-radius: 3px;
+	transition: all 0.2s ease-in-out;
+}
+
+.botonNetflix:hover {
+	background-color: rgb(255, 23, 23);
 }
