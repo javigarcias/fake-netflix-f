@@ -1,5 +1,9 @@
 .backgroundHome {
-    background-image: url(https://imgur.com/JUwE3TX.jpg);
+    // background-image: url(https://imgur.com/JUwE3TX.jpg);
+    background: url(https://imgur.com/JUwE3TX.jpg) no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+    overflow: hidden;
 
     .gradientHome {
         width: 100vw;
@@ -38,7 +42,7 @@
             .textHome {
                 width: 50%;
                 font-size: 4.4em;
-                padding: 1.5em 0 0;
+                padding: 5% 0 0;
             }
 
             .textHome1 {
@@ -56,6 +60,7 @@
             justify-content: center;
             align-items: center;
             padding: 1.5em;
+            width: 100%;
 
             .emailHome {
                 width: 40em;
