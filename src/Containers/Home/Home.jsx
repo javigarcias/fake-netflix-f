@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Home.scss';
 
 
@@ -13,8 +14,10 @@ export default function Home() {
                         <div className="cajaTodo">
 
                             <img className="imgLogo" src="Images/logoNetflix.png" alt="logo"></img>
-                            <button className="botonNetflix">Iniciar sesión</button>
 
+                            <Link to="/login">
+                                <button className="botonNetflix">Iniciar sesión</button>
+                            </Link>
                         </div>
                     </header>
 
@@ -25,11 +28,14 @@ export default function Home() {
                         <div className="textHome2">¿Quieres ver algo ya? Escribe tu correo para crear una suscripción a Netflix o reactivarla.</div>
                     </div>
 
-                        <div className="susHome">
-                            <input className="emailHome" type="email"></input>
+                    <div className="susHome">
+                        <input className="emailHome" type="email"></input>
+
+                        <Link to="/login">
                             <button className="botonEmpezar">Empezar</button>
-                        </div>
-                    
+                        </Link>
+                    </div>
+
                 </div>
             </div>
         </>

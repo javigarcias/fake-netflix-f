@@ -1,14 +1,20 @@
 import Home from './Containers/Home/Home'
-import { BrowserRouter } from 'react-router-dom'
+import { BrowserRouter, Route } from 'react-router-dom'
 import './App.css';
-import Header from './Components/Header';
+import Login from './Containers/Login/Login';
 
 function App() {
     return (
 
         <BrowserRouter>
+            <Route path="/">
+                <Home />
+            </Route>
 
-            <Home></Home>
+            <Route path="/login">
+                <Login />
+            </Route>
+
 
         </BrowserRouter>
     );
