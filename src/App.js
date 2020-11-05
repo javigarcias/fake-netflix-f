@@ -7,14 +7,18 @@ function App() {
     return (
 
         <BrowserRouter>
-            <Route path="/">
+
+            <Route path="/" exact>
                 <Home />
             </Route>
 
-            <Route path="/login">
+            <Route path="/login" exact>
                 <Login />
             </Route>
 
+            {/* <Route path="/register" exact>
+                <Register />
+            </Route> */}
 
         </BrowserRouter>
     );
