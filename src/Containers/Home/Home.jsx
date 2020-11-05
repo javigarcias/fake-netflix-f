@@ -26,7 +26,7 @@ export default function Home() {
 
                         <div className="susHome">
                             <input className="emailHome" type="email"></input>
-                            <button className="botonNetflix">Empezar</button>
+                            <button className="botonEmpezar">Empezar</button>
                         </div>
                     </div>
 

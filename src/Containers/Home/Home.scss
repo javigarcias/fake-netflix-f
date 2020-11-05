@@ -1,7 +1,5 @@
 .backgroundHome {
     background-image: url(https://imgur.com/JUwE3TX.jpg);
-    width: 100vw;
-    height: 100vh;
 
     .gradientHome {
         width: 100vw;
@@ -35,9 +33,10 @@
             font-family: Arial, Helvetica, sans-serif ;
             color: white;
             flex-direction: column;
+            width: 100%;
 
             .textHome {
-                width: 42%;
+                width: 50%;
                 font-size: 4.4em;
                 padding: 1.5em 0 0;
             }
@@ -56,11 +55,34 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            padding: 1.5em;
 
             .emailHome {
                 width: 40em;
-                height: 2.2em;
+                height: 5em;
+                border-radius: 5px;
             }
+            .botonEmpezar {
+                background-color: red;
+                color: white;
+                border: none ;
+            
+                text-align: center;
+                
+                display: inline-block;
+                font-size: 2em;
+                padding: 0.5em 1em;
+                height: 2.2em;
+                width: 7em;
+            
+                border-radius: 5px;
+                transition: all 0.2s ease-in-out;
+            }
+            
+            .botonEmpezar:hover {
+                background-color: rgb(255, 23, 23);
+            }
+            
         }
     }
 }
