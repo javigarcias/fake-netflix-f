@@ -23,7 +23,7 @@ export default function Home() {
 
 
                     <div className="textosHome">
-                        <div className="textHome">Todas las películas y series que desees, y mucho más.</div>
+                        <div className="textHome">Todas las películas y <br/> series que desees, y <br/>mucho más.</div>
                         <div className="textHome1">Disfruta donde quieras. Cancela cuando quieras.</div>
                         <div className="textHome2">¿Quieres ver algo ya? Escribe tu correo para crear una suscripción a Netflix o reactivarla.</div>
                     </div>
@@ -31,9 +31,9 @@ export default function Home() {
                     <div className="susHome">
                         <input className="emailHome" type="email"></input>
 
-                        <Link to="/login">
+                        {/* <Link to="/login"> */}
                             <button className="botonEmpezar">Empezar</button>
-                        </Link>
+                        {/* </Link> */}
                     </div>
 
                 </div>
