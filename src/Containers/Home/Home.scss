@@ -11,9 +11,9 @@
         background: rgb(0, 0, 0);
         background: linear-gradient(
             180deg,
-            rgba(0, 0, 0, 0.966) 0%,
-            rgba(0, 0, 0, 0.747) 36%,
-            rgba(0, 0, 0, 0.664) 63%
+            rgba(0, 0, 0, 0.678) 0%,
+            rgba(0, 0, 0, 0.623) 36%,
+            rgba(0, 0, 0, 0.527) 63%
         );
 
         .main-header {
@@ -36,6 +36,7 @@
             text-align: center;
             font-family: Arial, Helvetica, sans-serif ;
             color: white;
+            font-weight: bolder;
             flex-direction: column;
             width: 100%;
 

@@ -1,0 +1,93 @@
+.cajaLoginBlack {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+    .cajaLogin {
+        display: flex;
+        flex-direction: column;
+        // align-items: center;
+
+        background-color: rgba(0, 0, 0, 0.726);
+        width: 20em;
+        height: 35em;
+        padding: 1em 4em;
+        margin-bottom: 10em;
+
+        .textLogin {
+            color: white;
+            font-size: 35px;
+            font-weight: bolder;
+            margin-top: 1em;
+            margin-bottom: 1em;
+        }
+
+        .emailLogin {
+            background-color: #2c2e2e;
+            border-radius: 6px;
+            height: 4em;
+            width: 100%;
+            border: none;
+            margin-bottom: 1em;
+        }
+
+        .passwordLogin {
+            background-color: #2c2e2e;
+            border-radius: 6px;
+            height: 4em;
+            width: 100%;
+            border: none;
+            margin-bottom: 3em;
+        }
+
+        .cajaBoton {
+            width: 100%;
+
+            .botonEmpezarLogin {
+                background-color: red;
+                color: white;
+                border: none;
+                font-size: 1em;
+                font-weight: bolder;
+                width: 100%;
+                margin-top: 0.2em;
+                padding: 0.7em;
+
+                border-radius: 5px;
+                transition: all 0.2s ease-in-out;
+            }
+
+            .botonEmpezarLogin:hover {
+                background-color: rgb(255, 23, 23);
+            }
+        }
+
+        .rememberCheck {
+            display: flex;
+            flex-direction: row;
+            padding: 1em;
+
+            .checkText {
+                color: white;
+            }
+        }
+
+        .registerBox {
+            display: flex;
+            justify-content: space-around;
+            color: white;
+
+            .susBox {
+                font-weight: bold;
+                color: white;
+                text-decoration: none;
+            }
+
+            .susBox:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
