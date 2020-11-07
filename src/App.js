@@ -2,8 +2,7 @@ import Home from './Containers/Home/Home'
 import { BrowserRouter, Route } from 'react-router-dom'
 import './App.css';
 import Login from './Containers/Login/Login';
-import Header from './Components/Header';
-
+import Register from './Containers/Register/Register';
 
 function App() {
     return (
@@ -18,9 +17,9 @@ function App() {
                 <Login />
             </Route>
 
-            {/* <Route path="/register" exact>
+            <Route path="/register" exact>
                 <Register />
-            </Route> */}
+            </Route>
 
         </BrowserRouter>
     );
