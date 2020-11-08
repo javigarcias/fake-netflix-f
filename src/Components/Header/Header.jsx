@@ -23,7 +23,7 @@ const Header = () => {
             
             </div>
             <div className='niños'>
-                <Link to='/'>Niños</Link>
+                <Link to='/niños'>Niños</Link>
             </div>
             <div className='profile'>
                 <Link to='/profile'>Profile</Link>
@@ -34,4 +34,4 @@ const Header = () => {
 
 }
 
-export default Header
+export default Header;
