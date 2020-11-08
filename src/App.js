@@ -3,6 +3,8 @@ import { BrowserRouter, Route } from 'react-router-dom'
 import './App.css';
 import Login from './Containers/Login/Login';
 import Register from './Containers/Register/Register';
+import Profile from './Containers/Profile/Profile';
+ 
 
 function App() {
     return (
@@ -19,6 +21,10 @@ function App() {
 
             <Route path="/register" exact>
                 <Register />
+            </Route>
+
+            <Route path="/profile" exact>
+                <Profile />
             </Route>
 
         </BrowserRouter>
