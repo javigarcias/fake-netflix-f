@@ -1,7 +1,9 @@
-import SHOW_USER from './types';
+const {SHOW_USER, LOGIN} = require("./types");
+
 
 const initialState ={
-    orders: []
+    orders: [],
+    users: []
 }
 
 const reducer = (state=initialState, action) => {
@@ -9,9 +11,16 @@ const reducer = (state=initialState, action) => {
         case SHOW_USER:
             return{
                 ...state,
-                movies: action.payload
+                orders: action.payload
+            };
+        case LOGIN:
+            return{
+                ...state,
+                user: action.payload
             }
         default:
             return state
     }
 }
+
+export default reducer;
