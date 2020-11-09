@@ -1,5 +1,5 @@
 
-import './DocumentariesCarousel.css';
+import './DramaMoviesCarousel.css';
 import React, {useEffect, useState} from 'react';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -8,7 +8,7 @@ import axios from 'axios';
 
 
 
-function DocumentariesCarousel() {
+function DramaMoviesCarousel() {
    
     const config = {
 
@@ -24,7 +24,7 @@ function DocumentariesCarousel() {
         
     
     useEffect(() => {
-          axios.get('http://localhost:3000/searchByGenre?genre=99')
+          axios.get('http://localhost:3000/searchByGenre?genre=18')
             .then((res) => {
                 console.log(res.data)
                 setMovies(res.data);
@@ -65,4 +65,4 @@ function DocumentariesCarousel() {
     
    
 
-export default DocumentariesCarousel
+export default DramaMoviesCarousel
