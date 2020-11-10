@@ -1,13 +1,11 @@
 .backgroundHome {
-    // background-image: url(https://imgur.com/JUwE3TX.jpg);
-    background: url(https://imgur.com/JUwE3TX.jpg) no-repeat center center fixed;
-    background-size: cover;
-    height: 100%;
-    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    background-image: url(https://imgur.com/JUwE3TX.jpg);
 
     .gradientHome {
-        width: 100vw;
-        height: 100vh;
+        width: 100%;
+        height: 100%;
         background: rgb(0, 0, 0);
         background: linear-gradient(
             180deg,
@@ -39,6 +37,7 @@
             font-weight: bolder;
             flex-direction: column;
             width: 100%;
+            // height: 100%;
 
             .textHome {
                 width: 50%;

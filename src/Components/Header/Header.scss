@@ -1,18 +1,16 @@
-.header{
+.header {
     background-color: black;
     display: flex;
-   
-
 }
-.logoHeader{
+.logoHeader {
     margin-left: 1.5em;
     margin-top: 1em;
 }
-.imgLogoHeader{
+.imgLogoHeader {
     width: 7.5em;
     height: 2.7em;
 }
-.menuIzq{
+.menuIzq {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,43 +18,84 @@
 
     margin-top: 1em;
     a {
-        all:unset;
+        all: unset;
         color: white;
         padding: 0.5em;
         cursor: pointer;
-        &:hover{
+        &:hover {
             color: #cdcdcd;
         }
-
     }
 }
-.espacio{
+.espacio {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 35em;
 }
-.niños{
+
+.menuDer {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 2em;
+    width: 30em;
+
     margin-top: 1em;
     a {
-        all:unset;
+        all: unset;
         color: white;
         padding: 0.5em;
         cursor: pointer;
-        &:hover{
+        &:hover {
             color: #cdcdcd;
         }
-
     }
 }
-.profile{
+
+.niños {
     display: flex;
     justify-content: center;
     align-items: center;
-    width:15em;
-    margin-top: 1em;
+    // width: 2em;
+    // margin-top: 1em;
+    a {
+        all: unset;
+        color: white;
+        padding: 0.5em;
+        cursor: pointer;
+        &:hover {
+            color: #cdcdcd;
+        }
+    }
+}
+.profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // width: 2em;
+    // margin-top: 1em;
+
+    a {
+        all: unset;
+        color: white;
+        padding: 1em;
+        cursor: pointer;
+        &:hover {
+            color: #cdcdcd;
+        }
+    }
+}
+
+.admin {
+
+    color: white;
+    a {
+        all: unset;
+        color: white;
+        padding: 1em;
+        cursor: pointer;
+        &:hover {
+            color: #cdcdcd;
+        }
+    }
 }
