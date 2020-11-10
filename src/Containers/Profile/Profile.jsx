@@ -1,12 +1,17 @@
-import React from 'react';
-import axios from 'axios';
+import react from 'react';
+//import axios from 'axios';
 
-import '.Profile.scss';
+import './Profile.scss';
 
 const Profile = () => {
 
     return (
-        <div>Vista Profile</div>
+        <div className='profile'>
+           
+            Vista Profile
+        
+        
+        </div>
     )
 }
 

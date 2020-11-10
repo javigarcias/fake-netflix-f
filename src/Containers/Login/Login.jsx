@@ -2,8 +2,10 @@ import React from 'react';
 import axios from 'axios';
 import { Link, useHistory } from 'react-router-dom';
 import './Login.scss';
+import {connect} from 'react-redux';
+import {LOGIN} from '../../Redux/types';
 
-export default function Login() {
+const Login = ({dispatch}) => {
 
     const history = useHistory();
 
@@ -18,12 +20,12 @@ export default function Login() {
                 password: event.target.password.value
 
             };
-
             let respuesta = await axios.post(`${process.env.REACT_APP_APIURL}/user/login`, body);
 
-            let usuario = respuesta.data
+            //let usuario = respuesta.data
+            //localStorage.setItem("usuario", JSON.stringify(usuario));
 
-            localStorage.setItem("usuario", JSON.stringify(usuario));
+            dispatch({ type: LOGIN, payload: respuesta.data})
 
             history.push('/homepage')
 
@@ -72,3 +74,6 @@ export default function Login() {
         </div>
     )
 }
+
+
+export default connect()(Login);
