@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 
-import '.Homepage.scss';
+import './Homepage.scss';
 
 const Homepage = () => {
 
