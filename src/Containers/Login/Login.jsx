@@ -5,7 +5,7 @@ import './Login.scss';
 import {connect} from 'react-redux';
 import {LOGIN} from '../../Redux/types';
 
-const Login = ({dispach}) => {
+const Login = ({dispatch}) => {
 
     const history = useHistory();
 
@@ -20,13 +20,12 @@ const Login = ({dispach}) => {
                 password: event.target.password.value
 
             };
-
             let respuesta = await axios.post(`${process.env.REACT_APP_APIURL}/user/login`, body);
 
             //let usuario = respuesta.data
-
             //localStorage.setItem("usuario", JSON.stringify(usuario));
-            dispach({ type: LOGIN, payload: respuesta.data})
+
+            dispatch({ type: LOGIN, payload: respuesta.data})
 
             history.push('/homepage')
 
