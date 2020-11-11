@@ -49,6 +49,9 @@ function DramaMoviesCarousel() {
               <div className='title'><p><strong>{movie.title}</strong></p></div>
               <div className='popularity'><strong>Popularidad:</strong> {movie.popularity}</div><br></br>
               <div className='vote'><strong>Valoración/precio:</strong> {movie.vote_average}</div>
+              <div className="rentButtonBox">
+                            <button type="button" className="rentButton">ALQUILAR</button>
+                        </div>
               </div></div>
 
               
