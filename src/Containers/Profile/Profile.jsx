@@ -21,7 +21,15 @@ const Profile = ({dispatch, user, orders}) => {
     return (
         <div className='profile'>
            
-            Vista Profile
+          {orders?.map(order =>
+            <div className="order" key={order._id}>
+                <h3>{order.movieId.title}</h3>
+                <img src={'https://image.tmdb.org/t/p/w500' + order.movieId.poster_path} />
+                <h4>Rental date: {order.rentalDate}</h4>
+                <h4>Rental end date: {order.rentalEndDate}</h4>
+
+
+            </div>)}         
         
         
         </div>
@@ -30,7 +38,8 @@ const Profile = ({dispatch, user, orders}) => {
 const mapStateToProps = state => {
     console.log(state.user)
     return {
-        user: state.user,orders:state.orders
+        user: state.user,
+        orders:state.orders
     }
 }
 
