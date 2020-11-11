@@ -1,5 +1,5 @@
 
-import './DocumentariesCarousel.css';
+import './DocumentariesCarousel.scss';
 import React, {useEffect, useState} from 'react';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -45,10 +45,9 @@ function DocumentariesCarousel() {
                             
              <div className="imghover"> <img className="img" id="img" src={'http://image.tmdb.org/t/p/w500/'+ movie.poster_path} alt='poster_path'/>
               
-              <div className='movie-card' id="movie-card">
+             <div className='movie-card' id="movie-card">
               <div className='title'><p><strong>{movie.title}</strong></p></div>
               <div className='popularity'><strong>Popularidad:</strong> {movie.popularity}</div><br></br>
-              <div className='overview'><strong>Sinopsis:</strong> <em>{movie.overview}</em></div><br></br>
               <div className='vote'><strong>Valoración/precio:</strong> {movie.vote_average}</div>
               </div></div>
 

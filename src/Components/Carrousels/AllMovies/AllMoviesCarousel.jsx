@@ -1,6 +1,7 @@
-import './AllMoviesCarousel.css';
+
 import React, {useEffect, useState} from 'react';
 import Slider from "react-slick";
+
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import axios from 'axios';
@@ -47,7 +48,6 @@ function AllMoviesCarousel() {
               <div className='movie-card' id="movie-card">
               <div className='title'><p><strong>{movie.title}</strong></p></div>
               <div className='popularity'><strong>Popularidad:</strong> {movie.popularity}</div><br></br>
-              <div className='overview'><strong>Sinopsis:</strong> <em>{movie.overview}</em></div><br></br>
               <div className='vote'><strong>Valoración/precio:</strong> {movie.vote_average}</div>
               </div></div>
 

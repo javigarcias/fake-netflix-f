@@ -1,3 +1,4 @@
+
 import Home from './Containers/Home/Home'
 import { BrowserRouter, Route } from 'react-router-dom'
 import './App.css';
@@ -6,6 +7,14 @@ import Register from './Containers/Register/Register';
 import Header from './Components/Header/Header';
 import Homepage from './Containers/Homepage/Homepage';
 import Admin from './Containers/Admin/Admin';
+import AllMoviesCarousel from './Components/Carrousels/AllMovies/AllMoviesCarousel'
+import ClassicMoviesCarousel from './Components/Carrousels/ClassicMovies/ClassicMoviesCarousel'
+import DocumentariesCarousel from './Components/Carrousels/Documentaries/DocumentariesCarousel'
+import DramaMoviesCarousel from './Components/Carrousels/DramaMovies/DramaMoviesCarousel'
+import HorrorMoviesCarousel from './Components/Carrousels/HorrorMovies/HorrorMoviesCarousel'
+import PopularMoviesCarousel from './Components/Carrousels/PopularMovies/PopularMoviesCarousel'
+
+
 
 function App() {
     return (
@@ -26,7 +35,14 @@ function App() {
 
             <Route path="/homepage" exact>
                 <Header />
-                <Homepage />
+                <AllMoviesCarousel />
+                <ClassicMoviesCarousel />
+                <DocumentariesCarousel />
+                <DramaMoviesCarousel />
+                <HorrorMoviesCarousel />
+                <PopularMoviesCarousel />
+
+            
             </Route>
 
             <Route path="/admin" exact>
