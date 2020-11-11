@@ -99,3 +99,17 @@
         }
     }
 }
+
+.logout {
+
+    color: white;
+    a {
+        all: unset;
+        color: white;
+        padding: 1em;
+        cursor: pointer;
+        &:hover {
+            color: #cdcdcd;
+        }
+    }
+}

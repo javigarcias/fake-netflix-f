@@ -1,9 +1,9 @@
-const {SHOW_USER, LOGIN} = require("./types");
+const {SHOW_USER, LOGIN, LOGOUT} = require("./types");
 
 
 const initialState ={
     orders: [],
-    users: []
+    user: {}
 }
 
 const reducer = (state=initialState, action) => {
@@ -17,6 +17,11 @@ const reducer = (state=initialState, action) => {
             return{
                 ...state,
                 user: action.payload
+            }
+        case LOGOUT:
+            return{
+                ...state,
+                user: {}
             }
         default:
             return state
