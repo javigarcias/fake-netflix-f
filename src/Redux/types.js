@@ -1,2 +1,2 @@
-export const SHOW_USER = "SHOW_USER";
+export const USER_ORDERS = "USER_ORDERS";
 export const LOGIN = "LOGIN";
