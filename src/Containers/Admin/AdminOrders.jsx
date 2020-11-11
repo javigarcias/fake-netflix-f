@@ -1,22 +1,24 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import './Admin.scss';
+import './AdminOrders.scss';
 import dayjs from 'dayjs';
+import { useSelector } from 'react-redux';
 
 
 export default function AdminOrders() {
 
     const [orders, setOrders] = useState([]);
+    const user = useSelector(state => state.user)
 
     useEffect(() => {
 
         const fnc = async () => {
 
             try {
-                const usuario = JSON.parse(localStorage.getItem('usuario'));
+                // const usuario = JSON.parse(localStorage.getItem('usuario'));
 
                 const header = {
-                    headers: { Authorization: usuario.token }
+                    headers: { Authorization: user.token }
                 };
 
                 let respuesta = await axios.get(`${process.env.REACT_APP_APIURL}/order/show`, header);
@@ -32,7 +34,6 @@ export default function AdminOrders() {
 
     }, []);
 
-
     return (
 
         <>
@@ -43,7 +44,6 @@ export default function AdminOrders() {
                     {orders.map(order => {
 
                         return (
-
 
                             <div className="card">
 
@@ -71,18 +71,25 @@ export default function AdminOrders() {
                                     </p>
 
                                     <p>
-                                        Fin alquiler: {dayjs(order.rentalEndDate).format('DD-MM-YYYY')}
+                                        Precio: {order.movieId.title}
                                     </p>
+
                                 </div>
+
                             </div>
 
-
                         )
+
                     }
+
                     )}
+
                 </div>
+
             </div>
+
         </>
 
     )
+    
 }

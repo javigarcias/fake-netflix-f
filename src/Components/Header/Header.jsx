@@ -1,15 +1,15 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import './Header.scss';
 
 const Header = () => {
 
-    const usuario = JSON.parse(localStorage.getItem('usuario'));
+    // const usuario = JSON.parse(localStorage.getItem('usuario'));
 
-    const esAdmin = usuario?.role === 'admin';
-
+    const user = useSelector(state => state.user)
+    const esAdmin = user?.role === 'admin';
  
-
     return (
         <div className='header'>
             <div className='logoHeader'>

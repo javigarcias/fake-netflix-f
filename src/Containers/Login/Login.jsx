@@ -22,9 +22,6 @@ const Login = ({dispatch}) => {
             };
             let respuesta = await axios.post(`${process.env.REACT_APP_APIURL}/user/login`, body);
 
-            //let usuario = respuesta.data
-            //localStorage.setItem("usuario", JSON.stringify(usuario));
-
             dispatch({ type: LOGIN, payload: respuesta.data})
 
             history.push('/homepage')
