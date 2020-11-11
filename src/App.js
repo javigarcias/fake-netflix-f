@@ -13,6 +13,7 @@ import DocumentariesCarousel from './Components/Carrousels/Documentaries/Documen
 import DramaMoviesCarousel from './Components/Carrousels/DramaMovies/DramaMoviesCarousel'
 import HorrorMoviesCarousel from './Components/Carrousels/HorrorMovies/HorrorMoviesCarousel'
 import PopularMoviesCarousel from './Components/Carrousels/PopularMovies/PopularMoviesCarousel'
+import KidsMoviesCarousel from './Components/Carrousels/KidsMovies/KidsMoviesCarousel'
 
 
 
@@ -41,7 +42,7 @@ function App() {
                 <DramaMoviesCarousel />
                 <HorrorMoviesCarousel />
                 <PopularMoviesCarousel />
-
+                <KidsMoviesCarousel />
             
             </Route>
 
