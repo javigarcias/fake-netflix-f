@@ -1,9 +1,9 @@
-import './ClassicMoviesCarousel.css';
 import React, {useEffect, useState} from 'react';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import axios from 'axios';
+import './ClassicMoviesCarousel.scss'
 
 
 
@@ -23,7 +23,7 @@ function ClassicMoviesCarousel() {
         
     
     useEffect(() => {
-          axios.get('http://localhost:3000/showMovies')
+          axios.get('http://localhost:3000/showMoviesOldest')
             .then((res) => {
                 console.log(res.data)
                 setMovies(res.data);
@@ -44,11 +44,13 @@ function ClassicMoviesCarousel() {
                             
              <div className="imghover"> <img className="img" id="img" src={'http://image.tmdb.org/t/p/w500/'+ movie.poster_path} alt='poster_path'/>
               
-              <div className='movie-card' id="movie-card">
+             <div className='movie-card' id="movie-card">
               <div className='title'><p><strong>{movie.title}</strong></p></div>
               <div className='popularity'><strong>Popularidad:</strong> {movie.popularity}</div><br></br>
-              <div className='overview'><strong>Sinopsis:</strong> <em>{movie.overview}</em></div><br></br>
               <div className='vote'><strong>Valoración/precio:</strong> {movie.vote_average}</div>
+              <div className="rentButtonBox">
+                            <button type="button" className="rentButton">ALQUILAR</button>
+                        </div>
               </div></div>
 
               

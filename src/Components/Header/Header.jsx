@@ -1,14 +1,34 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { Link, useHistory } from 'react-router-dom';
+import axios from 'axios';
 import './Header.scss';
+import { LOGOUT } from '../../Redux/types';
 
 const Header = () => {
 
-    const usuario = JSON.parse(localStorage.getItem('usuario'));
+    const dispatch = useDispatch();
+    const user = useSelector(state => state.user)
+    const esAdmin = user?.role === 'admin';
 
-    const esAdmin = usuario?.role === 'admin';
+    const logout = async (event) => {
 
- 
+        try {
+            console.log('asfds')
+            const header = {
+                headers: { Authorization: user?.token }
+            };
+
+            console.log(dispatch)
+            dispatch({ type: LOGOUT })
+
+
+            await axios.get(`${process.env.REACT_APP_APIURL}/user/logout`, header);
+
+        } catch (error) {
+            console.log(error);
+        }
+    };
 
     return (
         <div className='header'>
@@ -29,15 +49,23 @@ const Header = () => {
             </div>
 
             <div className='menuDer'>
+
                 <div className='niños'>
                     <Link to='/niños'>Niños</Link>
                 </div>
+
                 <div className='profile'>
                     <Link to='/profile'>Profile</Link>
                 </div>
-                { esAdmin && <div className="admin">
+n
+                {esAdmin && <div className="admin">
                     <Link to='/admin'>Admin</Link>
                 </div>}
+
+                {<div className="logout" type="link" onClick={logout}>
+                    <Link to='/'>Cerrar sesión</Link>
+                </div>}
+
             </div>
         </div>
     )

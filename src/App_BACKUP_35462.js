@@ -6,11 +6,10 @@ import Login from './Containers/Login/Login';
 import Register from './Containers/Register/Register';
 import Header from './Components/Header/Header';
 import Homepage from './Containers/Homepage/Homepage';
-
+<<<<<<< HEAD
 import AdminOrders from './Containers/Admin/AdminOrders';
-
+=======
 import Admin from './Containers/Admin/Admin';
-import Profile from './Containers/Profile/Profile';
 import AllMoviesCarousel from './Components/Carrousels/AllMovies/AllMoviesCarousel'
 import ClassicMoviesCarousel from './Components/Carrousels/ClassicMovies/ClassicMoviesCarousel'
 import DocumentariesCarousel from './Components/Carrousels/Documentaries/DocumentariesCarousel'
@@ -20,7 +19,7 @@ import PopularMoviesCarousel from './Components/Carrousels/PopularMovies/Popular
 import KidsMoviesCarousel from './Components/Carrousels/KidsMovies/KidsMoviesCarousel'
 
 
-
+>>>>>>> feature/Homepage
 
 function App() {
     return (
@@ -54,10 +53,6 @@ function App() {
             <Route path="/admin" exact>
                 <Header />
                 <AdminOrders />
-            </Route>
-            <Route path="/profile" exact>
-                <Header />
-                <Profile />
             </Route>
 
         </BrowserRouter>

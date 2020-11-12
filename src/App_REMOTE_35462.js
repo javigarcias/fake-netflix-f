@@ -6,11 +6,7 @@ import Login from './Containers/Login/Login';
 import Register from './Containers/Register/Register';
 import Header from './Components/Header/Header';
 import Homepage from './Containers/Homepage/Homepage';
-
-import AdminOrders from './Containers/Admin/AdminOrders';
-
 import Admin from './Containers/Admin/Admin';
-import Profile from './Containers/Profile/Profile';
 import AllMoviesCarousel from './Components/Carrousels/AllMovies/AllMoviesCarousel'
 import ClassicMoviesCarousel from './Components/Carrousels/ClassicMovies/ClassicMoviesCarousel'
 import DocumentariesCarousel from './Components/Carrousels/Documentaries/DocumentariesCarousel'
@@ -18,7 +14,6 @@ import DramaMoviesCarousel from './Components/Carrousels/DramaMovies/DramaMovies
 import HorrorMoviesCarousel from './Components/Carrousels/HorrorMovies/HorrorMoviesCarousel'
 import PopularMoviesCarousel from './Components/Carrousels/PopularMovies/PopularMoviesCarousel'
 import KidsMoviesCarousel from './Components/Carrousels/KidsMovies/KidsMoviesCarousel'
-
 
 
 
@@ -53,11 +48,7 @@ function App() {
 
             <Route path="/admin" exact>
                 <Header />
-                <AdminOrders />
-            </Route>
-            <Route path="/profile" exact>
-                <Header />
-                <Profile />
+                <Admin />
             </Route>
 
         </BrowserRouter>

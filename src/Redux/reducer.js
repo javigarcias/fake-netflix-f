@@ -1,4 +1,4 @@
-const {USER_ORDERS, LOGIN} = require("./types");
+const {USER_ORDERS, LOGIN, LOGOUT} = require("./types");
 
 
 const initialState ={
@@ -17,6 +17,11 @@ const reducer = (state=initialState, action) => {
             return{
                 ...state,
                 user: action.payload
+            }
+        case LOGOUT:
+            return{
+                ...state,
+                user: {}
             }
         default:
             return state
