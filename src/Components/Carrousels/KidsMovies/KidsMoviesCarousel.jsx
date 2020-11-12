@@ -1,14 +1,14 @@
 
+import './KidsMoviesCarousel.scss';
 import React, {useEffect, useState} from 'react';
 import Slider from "react-slick";
-
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import axios from 'axios';
 
 
 
-function AllMoviesCarousel() {
+function KidsMoviesCarousel() {
    
     const config = {
 
@@ -24,7 +24,7 @@ function AllMoviesCarousel() {
         
     
     useEffect(() => {
-          axios.get('http://localhost:3000/showMovies')
+          axios.get('http://localhost:3000/searchByGenre?genre=16')
             .then((res) => {
                 console.log(res.data)
                 setMovies(res.data);
@@ -45,13 +45,13 @@ function AllMoviesCarousel() {
                             
              <div className="imghover"> <img className="img" id="img" src={'http://image.tmdb.org/t/p/w500/'+ movie.poster_path} alt='poster_path'/>
               
-              <div className='movie-card' id="movie-card">
-              <div className='title'><p><strong>{movie.title}</strong></p></div>{/* 
+             <div className='movie-card' id="movie-card">
+              <div className='title'><p><strong>{movie.title}</strong></p></div>
               <div className='popularity'><strong>Popularidad:</strong> {movie.popularity}</div><br></br>
-              <div className='vote'><strong>Valoración/precio:</strong> {movie.vote_average}</div> */}
-              
+              <div className='vote'><strong>Valoración/precio:</strong> {movie.vote_average}</div>
+              <div className="rentButtonBox">
                             <button type="button" className="rentButton">ALQUILAR</button>
-                        
+                        </div>
               </div></div>
 
               
@@ -67,4 +67,4 @@ function AllMoviesCarousel() {
     
    
 
-export default AllMoviesCarousel
+export default  KidsMoviesCarousel
