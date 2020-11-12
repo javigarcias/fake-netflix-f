@@ -6,6 +6,7 @@ import Register from './Containers/Register/Register';
 import Header from './Components/Header/Header';
 import Homepage from './Containers/Homepage/Homepage';
 import Admin from './Containers/Admin/Admin';
+import Profile from './Containers/Profile/Profile';
 
 function App() {
     return (
@@ -32,6 +33,10 @@ function App() {
             <Route path="/admin" exact>
                 <Header />
                 <Admin />
+            </Route>
+            <Route path="/profile" exact>
+                <Header />
+                <Profile />
             </Route>
 
         </BrowserRouter>

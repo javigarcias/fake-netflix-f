@@ -1,14 +1,14 @@
-const {SHOW_USER, LOGIN} = require("./types");
+const {USER_ORDERS, LOGIN} = require("./types");
 
 
 const initialState ={
     orders: [],
-    users: []
+    user: {}
 }
 
 const reducer = (state=initialState, action) => {
     switch(action.type) {
-        case SHOW_USER:
+        case USER_ORDERS:
             return{
                 ...state,
                 orders: action.payload
