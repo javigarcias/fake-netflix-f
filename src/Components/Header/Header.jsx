@@ -31,43 +31,43 @@ const Header = () => {
     };
 
     return (
-        <div className='header'>
-            <div className='logoHeader'>
-                <img className="imgLogoHeader" src="Images/logoNetflix.png" alt="logo"></img>
-            </div>
-            <div className='menuIzq'>
-                <Link to='/'>Inicio</Link>
-                <Link to='/'>Series</Link>
-                <Link to='/'>Peliculas</Link>
-                <Link to='/'>Recientes</Link>
-                <Link to='/'>Mi lista</Link>
-            </div>
-            <div className='espacio'></div>
+        <>
 
-            <div className='lupa' >
+            <div className='header'>
 
-            </div>
 
-            <div className='menuDer'>
+                <div className='menuIzq'>
 
-                <div className='niños'>
-                    <Link to='/niños'>Niños</Link>
+                    <div>
+                        <img className="imgLogoHeader" src="Images/logoNetflix.png" alt="logo"></img>
+                    </div>
+                    <Link to='/'>Inicio</Link>
+                    <Link to='/'>Peliculas</Link>
+                    <Link to='/'>Recientes</Link>
                 </div>
+                
+                <div className='menuDer'>
 
-                <div className='profile'>
-                    <Link to='/profile'>Profile</Link>
-                </div>
+                    <div className='niños'>
+                        <Link to='/niños'>Niños</Link>
+                    </div>
+
+                    <div className='profile'>
+                        <Link to='/profile'>Profile</Link>
+                    </div>
 n
                 {esAdmin && <div className="admin">
-                    <Link to='/admin'>Admin</Link>
-                </div>}
+                        <Link to='/admin'>Admin</Link>
+                    </div>}
 
-                {<div className="logout" type="link" onClick={logout}>
-                    <Link to='/'>Cerrar sesión</Link>
-                </div>}
+                    {<div className="logout" type="link" onClick={logout}>
+                        <Link to='/'>Cerrar sesión</Link>
+                    </div>}
 
+                </div>
             </div>
-        </div>
+
+        </>
     )
 
 }
