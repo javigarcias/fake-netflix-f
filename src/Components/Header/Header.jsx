@@ -40,20 +40,27 @@ const Header = () => {
                         <img className="imgLogoHeader" src="Images/logoNetflix.png" alt="logo"></img>
                     </div>
                     <Link to='/'>Inicio</Link>
-                    <Link to='/'>Peliculas</Link>
-                    <Link to='/'>Recientes</Link>
-                    
+                    <Link to='/peliculas'>Peliculas</Link>
+                    <Link to='/recientes'>Recientes</Link>
+                    <Link to='/populares'>Populares</Link>
+                    <Link to='/estrenos'>Próximamente</Link>
+                </div>
+
+                <div className="categoriesHeader">
+                    <Link to='/misterio'>Misterio</Link>
+                    <Link to='/terror'>Terror</Link>
+                    <Link to='/comedia'>Comedia</Link>
+                    <Link to='/drama'>Drama</Link>
+                    <Link to='/accion'>Acción</Link>
+                    <Link to='/documental'>Documental</Link>
+                    <Link to='/clasicos'>Clásicos</Link>
+                    <Link to='/niños'>Niños</Link>
                 </div>
 
                 <div className='menuDer'>
-
-                    <Link to='/niños'>Niños</Link>
-                    <Link to='/profile'>Profile</Link>
-
+                    <Link to='/profile'><img className="imgLogoProfile" src="Images/yuy.png" alt="logoProfile"></img></Link>
                     {esAdmin && <Link to='/admin'>Admin</Link>}
-
                     {<Link to='/' onClick={logout}>Cerrar sesión</Link>}
-
                 </div>
             </div>
 

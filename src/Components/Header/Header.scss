@@ -1,7 +1,9 @@
 .header {
     display: flex;
     justify-content: space-between;
-    background-color: black;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7035189075630253) 51%, rgba(0,0,0,0.008841036414565795) 100%);
+    background-color: rgb(43, 42, 42);
     width: 100%;
 }
 
@@ -25,10 +27,32 @@
     }
 }
 
+.categoriesHeader {
+    display: flex;
+    align-items: center;
+    margin-top: 1em;
+
+    a {
+        all: unset;
+        color: white;
+        padding: 0.5em;
+        cursor: pointer;
+        &:hover {
+            color: #cdcdcd;
+        }
+    }
+}
+
 .menuDer {
     display: flex;
     align-items: center;
     margin-top: 1em;
+
+    .imgLogoProfile {
+        width: 2em;
+        height: 2em;
+        border-radius: 2px;
+    }
 
     a {
         all: unset;
