@@ -34,8 +34,6 @@ const Header = () => {
         <>
 
             <div className='header'>
-
-
                 <div className='menuIzq'>
 
                     <div>
@@ -44,25 +42,17 @@ const Header = () => {
                     <Link to='/'>Inicio</Link>
                     <Link to='/'>Peliculas</Link>
                     <Link to='/'>Recientes</Link>
+                    
                 </div>
-                
+
                 <div className='menuDer'>
 
-                    <div className='niños'>
-                        <Link to='/niños'>Niños</Link>
-                    </div>
+                    <Link to='/niños'>Niños</Link>
+                    <Link to='/profile'>Profile</Link>
 
-                    <div className='profile'>
-                        <Link to='/profile'>Profile</Link>
-                    </div>
-n
-                {esAdmin && <div className="admin">
-                        <Link to='/admin'>Admin</Link>
-                    </div>}
+                    {esAdmin && <Link to='/admin'>Admin</Link>}
 
-                    {<div className="logout" type="link" onClick={logout}>
-                        <Link to='/'>Cerrar sesión</Link>
-                    </div>}
+                    {<Link to='/' onClick={logout}>Cerrar sesión</Link>}
 
                 </div>
             </div>
