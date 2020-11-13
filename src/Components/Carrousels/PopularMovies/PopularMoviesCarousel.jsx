@@ -23,7 +23,7 @@ function PopularMoviesCarousel() {
         
     
     useEffect(() => {
-          axios.get('http://localhost:3000/showMoviesNewest')
+          axios.get(`${process.env.REACT_APP_APIURL}/showMoviesNewest`)
             .then((res) => {
                 console.log(res.data)
                 setMovies(res.data);

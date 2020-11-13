@@ -24,7 +24,7 @@ function AllMoviesCarousel() {
         
     
     useEffect(() => {
-          axios.get('http://localhost:3000/showMovies')
+          axios.get(`${process.env.REACT_APP_APIURL}/showMovies`)
             .then((res) => {
                 console.log(res.data)
                 setMovies(res.data);

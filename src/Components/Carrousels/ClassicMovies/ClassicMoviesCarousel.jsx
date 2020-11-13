@@ -23,7 +23,7 @@ function ClassicMoviesCarousel() {
         
     
     useEffect(() => {
-          axios.get('http://localhost:3000/showMoviesOldest')
+          axios.get(`${process.env.REACT_APP_APIURL}/showMoviesOldest`)
             .then((res) => {
                 console.log(res.data)
                 setMovies(res.data);
