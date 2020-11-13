@@ -14,19 +14,7 @@ import DramaMoviesCarousel from './Components/Carrousels/DramaMovies/DramaMovies
 import HorrorMoviesCarousel from './Components/Carrousels/HorrorMovies/HorrorMoviesCarousel'
 import PopularMoviesCarousel from './Components/Carrousels/PopularMovies/PopularMoviesCarousel'
 import KidsMoviesCarousel from './Components/Carrousels/KidsMovies/KidsMoviesCarousel'
-import Terror from './Containers/Terror/Terror';
-import Clasicos from './Containers/Clasicos/Clasicos';
-import Drama from './Containers/Drama/Drama';
-import Documental from './Containers/Documental/Documental';
-import Niños from './Containers/Niños/Niños';
-import Comedia from './Containers/Comedia/Comedia';
-import Accion from './Containers/Accion/Accion';
-import Misterio from './Containers/Misterio/Misterio';
-import Recientes from './Containers/Recientes/Recientes';
-import Peliculas from './Containers/Peliculas/Peliculas';
-import Populares from './Containers/Populares/Populares';
-import Estrenos from './Containers/Estrenos/Estrenos';
-
+import MostrarPeliculas from './Components/MostrarPeliculas/MostrarPeliculas';
 
 
 
@@ -70,62 +58,62 @@ function App() {
 
             <Route path='/peliculas' exact>
                 <Header />
-                <Peliculas />
+                <MostrarPeliculas endpoint={`${process.env.REACT_APP_APIURL}/showMovies`}/>
             </Route>
 
             <Route path='/populares' exact>
                 <Header />
-                <Populares />
+                <MostrarPeliculas endpoint={`${process.env.REACT_APP_APIURL}/showMoviesPopularity`}/>
             </Route>
 
             <Route path='/estrenos' exact>
                 <Header />
-                <Estrenos />
+                <MostrarPeliculas endpoint={`${process.env.REACT_APP_APIURL}/showUpcoming`}/>
             </Route>
 
             <Route path='/recientes' exact>
                 <Header />
-                <Recientes />
+                <MostrarPeliculas endpoint={`${process.env.REACT_APP_APIURL}/showMoviesNewest`}/>
             </Route>
 
             <Route path='/terror' exact>
                 <Header />
-                <Terror />
+                <MostrarPeliculas endpoint={`${process.env.REACT_APP_APIURL}/searchByGenre?genre=27`}/>
             </Route>
 
             <Route path='/clasicos' exact>
                 <Header />
-                <Clasicos />
+                <MostrarPeliculas endpoint={`${process.env.REACT_APP_APIURL}/showMoviesOldest`}/>
             </Route>
 
             <Route path='/drama' exact>
                 <Header />
-                <Drama />
+                <MostrarPeliculas endpoint={`${process.env.REACT_APP_APIURL}/searchByGenre?genre=18`}/>
             </Route>
 
             <Route path='/documental' exact>
                 <Header />
-                <Documental />
+                <MostrarPeliculas endpoint={`${process.env.REACT_APP_APIURL}/searchByGenre?genre=99`}/>
             </Route>
 
             <Route path='/niños' exact>
                 <Header />
-                <Niños />
+                <MostrarPeliculas endpoint={`${process.env.REACT_APP_APIURL}/searchByGenre?genre=16`}/>
             </Route>
 
             <Route path='/comedia' exact>
                 <Header />
-                <Comedia />
+                <MostrarPeliculas endpoint={`${process.env.REACT_APP_APIURL}/searchByGenre?genre=35`}/>
             </Route>
 
             <Route path='/accion' exact>
                 <Header />
-                <Accion />
+                <MostrarPeliculas endpoint={`${process.env.REACT_APP_APIURL}/searchByGenre?genre=28`}/>
             </Route>
 
             <Route path='/misterio' exact>
                 <Header />
-                <Misterio />
+                <MostrarPeliculas endpoint={`${process.env.REACT_APP_APIURL}/searchByGenre?genre=9648`}/>
             </Route>
         </BrowserRouter>
     );

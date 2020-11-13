@@ -1,18 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import './MostrarPeliculas.scss';
 import dayjs from 'dayjs';
 
 
-export default function Estrenos() {
+export default function MostrarPeliculas({endpoint}) {
 
     const [movies, setMovies] = useState([]);
 
     useEffect(() => {
 
-        const fnc = async () => {
+        const fnc = async () => { 
             try {
 
-                let respuesta = await axios.get(`${process.env.REACT_APP_APIURL}/showUpcoming`);
+                let respuesta = await axios.get(endpoint);
 
                 setMovies(respuesta.data);
 
@@ -34,7 +35,7 @@ export default function Estrenos() {
                         return (
                             <div className="cardMovies">
 
-                                <img className="moviesPoster" src={`https://image.tmdb.org/t/p/w200/${movie.poster_path}`} alt="poster"></img>
+                                <img className="moviesPoster" src={!movie.poster_path ? 'Images/notfound.png' : `https://image.tmdb.org/t/p/w200/${movie.poster_path}`} alt="poster"></img>
 
                                 <div className="textoMovies">
                                     <p>
