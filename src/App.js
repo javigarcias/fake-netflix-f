@@ -5,11 +5,7 @@ import './App.css';
 import Login from './Containers/Login/Login';
 import Register from './Containers/Register/Register';
 import Header from './Components/Header/Header';
-import Homepage from './Containers/Homepage/Homepage';
-
 import AdminOrders from './Containers/Admin/AdminOrders';
-
-import Admin from './Containers/Admin/Admin';
 import Profile from './Containers/Profile/Profile';
 import AllMoviesCarousel from './Components/Carrousels/AllMovies/AllMoviesCarousel'
 import ClassicMoviesCarousel from './Components/Carrousels/ClassicMovies/ClassicMoviesCarousel'
