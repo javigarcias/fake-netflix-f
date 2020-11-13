@@ -1,22 +1,19 @@
 .header {
-    background-color: black;
     display: flex;
+    justify-content: space-between;
+    background-color: black;
+    width: 100%;
 }
-.logoHeader {
-    margin-left: 1.5em;
-    margin-top: 1em;
-}
+
 .imgLogoHeader {
     width: 7.5em;
     height: 2.7em;
 }
 .menuIzq {
     display: flex;
-    justify-content: center;
     align-items: center;
-    width: 25em;
-
     margin-top: 1em;
+
     a {
         all: unset;
         color: white;
@@ -26,87 +23,17 @@
             color: #cdcdcd;
         }
     }
-}
-.espacio {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 35em;
 }
 
 .menuDer {
     display: flex;
-    justify-content: center;
     align-items: center;
-    width: 30em;
-
     margin-top: 1em;
+
     a {
         all: unset;
         color: white;
         padding: 0.5em;
-        cursor: pointer;
-        &:hover {
-            color: #cdcdcd;
-        }
-    }
-}
-
-.niños {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    // width: 2em;
-    // margin-top: 1em;
-    a {
-        all: unset;
-        color: white;
-        padding: 0.5em;
-        cursor: pointer;
-        &:hover {
-            color: #cdcdcd;
-        }
-    }
-}
-.profile {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    // width: 2em;
-    // margin-top: 1em;
-
-    a {
-        all: unset;
-        color: white;
-        padding: 1em;
-        cursor: pointer;
-        &:hover {
-            color: #cdcdcd;
-        }
-    }
-}
-
-.admin {
-
-    color: white;
-    a {
-        all: unset;
-        color: white;
-        padding: 1em;
-        cursor: pointer;
-        &:hover {
-            color: #cdcdcd;
-        }
-    }
-}
-
-.logout {
-
-    color: white;
-    a {
-        all: unset;
-        color: white;
-        padding: 1em;
         cursor: pointer;
         &:hover {
             color: #cdcdcd;
