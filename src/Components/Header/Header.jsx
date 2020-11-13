@@ -39,6 +39,9 @@ const Header = () => {
                     <div>
                         <img className="imgLogoHeader" src="Images/logoNetflix.png" alt="logo"></img>
                     </div>
+                    <div>
+                        <img className="imgLogoProfile" src="Images/yuy.png" alt="logoProfile"></img>
+                    </div>
                     <Link to='/'>Inicio</Link>
                     <Link to='/'>Peliculas</Link>
                     <Link to='/'>Recientes</Link>
