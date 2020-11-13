@@ -19,22 +19,22 @@ const Profile = ({ dispatch, user, orders }) => {
 
     return (
         <div className='profileView'>
-
-            {orders?.map(order =>
-                <div className="cardOrder" key={order._id}>
-                    <div className="titleCard">{order.movieId.title}</div>                <h2>{order.movieId.title}</h2>
-                    <div className="imageCard">
-                        <img src={'https://image.tmdb.org/t/p/w500' + order.movieId.poster_path} />
-                    </div>
-                    <div className="infoCard">
-                        FECHA ALQUILER: {order.rentalDate}
-                        FECHA DEVOLUCIÓN: {order.rentalEndDate}
-                    </div>
-
-
-                </div>)}
+            <div className="order">
+                {orders?.map(order =>
+                    <div className="cardOrder" key={order._id}>
+                        <div className="titleCard">{order.movieId.title}</div>
+                        <div >
+                            <img className="imageCard" src={'https://image.tmdb.org/t/p/w500' + order.movieId.poster_path} />
+                        </div>
+                        <div className="infoCard">
+                            FECHA ALQUILER: {order.rentalDate}
+                            FECHA DEVOLUCIÓN: {order.rentalEndDate}
+                        </div>
 
 
+                    </div>)}
+
+            </div>
         </div>
     )
 }

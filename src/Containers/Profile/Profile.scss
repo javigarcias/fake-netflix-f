@@ -2,9 +2,26 @@
     background-color: black;
     width: 100vw;
     height: 100vh;
+
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     color: white;
+}
+.cardOrder{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 3em;
+    width: 1em;
+    background-color: hotpink;
+}
+.imageCard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15em;
+     
 }
