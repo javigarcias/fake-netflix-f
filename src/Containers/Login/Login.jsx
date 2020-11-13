@@ -27,7 +27,7 @@ const Login = ({dispatch}) => {
 
             dispatch({ type: LOGIN, payload: respuesta.data})
 
-            history.push('/profile')
+            history.push('/homepage')
 
 
         } catch (error) {
