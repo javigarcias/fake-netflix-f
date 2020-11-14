@@ -11,6 +11,8 @@ const Header = () => {
     const user = useSelector(state => state.user)
     const esAdmin = user?.role === 'admin';
 
+    
+
     const logout = async (event) => {
 
         try {
@@ -39,6 +41,7 @@ const Header = () => {
                     <div>
                         <img className="imgLogoHeader" src="Images/logoNetflix.png" alt="logo"></img>
                     </div>
+                    <Link to='/homepage'>Inicio</Link>
                     <Link to='/peliculas'>Peliculas</Link>
                     <Link to='/recientes'>Recientes</Link>
                     <Link to='/populares'>Populares</Link>

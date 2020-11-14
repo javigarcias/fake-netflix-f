@@ -3,7 +3,8 @@ const {USER_ORDERS, LOGIN, LOGOUT} = require("./types");
 
 const initialState ={
     orders: [],
-    user: {}
+    user: {},
+    
 }
 
 const reducer = (state=initialState, action) => {
@@ -23,6 +24,7 @@ const reducer = (state=initialState, action) => {
                 ...state,
                 user: {}
             }
+        
         default:
             return state
     }

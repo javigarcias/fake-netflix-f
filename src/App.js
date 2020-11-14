@@ -1,3 +1,4 @@
+import 'antd/dist/antd.css';
 import React, { Component } from 'react'
 import Home from './Containers/Home/Home'
 import { BrowserRouter, Route } from 'react-router-dom'
@@ -7,14 +8,10 @@ import Register from './Containers/Register/Register';
 import Header from './Components/Header/Header';
 import AdminOrders from './Containers/Admin/AdminOrders';
 import Profile from './Containers/Profile/Profile';
-import AllMoviesCarousel from './Components/Carrousels/AllMovies/AllMoviesCarousel'
-import ClassicMoviesCarousel from './Components/Carrousels/ClassicMovies/ClassicMoviesCarousel'
-import DocumentariesCarousel from './Components/Carrousels/Documentaries/DocumentariesCarousel'
-import DramaMoviesCarousel from './Components/Carrousels/DramaMovies/DramaMoviesCarousel'
-import HorrorMoviesCarousel from './Components/Carrousels/HorrorMovies/HorrorMoviesCarousel'
-import PopularMoviesCarousel from './Components/Carrousels/PopularMovies/PopularMoviesCarousel'
-import KidsMoviesCarousel from './Components/Carrousels/KidsMovies/KidsMoviesCarousel'
+import Search from './Components/SearchBar/SearchBar'
 import MostrarPeliculas from './Components/MostrarPeliculas/MostrarPeliculas';
+import MostrarCarrousel from './Components/MostrarCarrousel/MostrarCarrousel'
+
 
 
 
@@ -37,14 +34,14 @@ function App() {
 
             <Route path="/homepage" exact>
                 <Header />
-                <AllMoviesCarousel />
-                <ClassicMoviesCarousel />
-                <DocumentariesCarousel />
-                <DramaMoviesCarousel />
-                <HorrorMoviesCarousel />
-                <PopularMoviesCarousel />
-                <KidsMoviesCarousel />
-            
+                
+                <MostrarCarrousel endpoint={`${process.env.REACT_APP_APIURL}/showMovies`}/>
+                <MostrarCarrousel endpoint={`${process.env.REACT_APP_APIURL}/showMoviesNewest`}/>
+                <MostrarCarrousel endpoint={`${process.env.REACT_APP_APIURL}/showMoviesOldest`}/>
+                <MostrarCarrousel endpoint={`${process.env.REACT_APP_APIURL}/searchByGenre?genre=99`}/>
+                <MostrarCarrousel endpoint={`${process.env.REACT_APP_APIURL}/searchByGenre?genre=27`}/>
+                <MostrarCarrousel endpoint={`${process.env.REACT_APP_APIURL}/searchByGenre?genre=18`}/>
+                <MostrarCarrousel endpoint={`${process.env.REACT_APP_APIURL}/searchByGenre?genre=16`}/>
             </Route>
 
             <Route path="/admin" exact>
