@@ -24,7 +24,7 @@ function HorrorMoviesCarousel() {
         
     
     useEffect(() => {
-          axios.get('http://localhost:3000/searchByGenre?genre=27')
+          axios.get(`${process.env.REACT_APP_APIURL}/searchByGenre?genre=27`)
             .then((res) => {
                 console.log(res.data)
                 setMovies(res.data);

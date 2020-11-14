@@ -24,7 +24,7 @@ function KidsMoviesCarousel() {
         
     
     useEffect(() => {
-          axios.get('http://localhost:3000/searchByGenre?genre=16')
+          axios.get(`${process.env.REACT_APP_APIURL}/searchByGenre?genre=16`)
             .then((res) => {
                 console.log(res.data)
                 setMovies(res.data);

@@ -31,43 +31,39 @@ const Header = () => {
     };
 
     return (
-        <div className='header'>
-            <div className='logoHeader'>
-                <img className="imgLogoHeader" src="Images/logoNetflix.png" alt="logo"></img>
-            </div>
-            <div className='menuIzq'>
-                <Link to='/'>Inicio</Link>
-                <Link to='/'>Series</Link>
-                <Link to='/'>Peliculas</Link>
-                <Link to='/'>Recientes</Link>
-                <Link to='/'>Mi lista</Link>
-            </div>
-            <div className='espacio'></div>
+        <>
 
-            <div className='lupa' >
+            <div className='header'>
+                <div className='menuIzq'>
 
-            </div>
+                    <div>
+                        <img className="imgLogoHeader" src="Images/logoNetflix.png" alt="logo"></img>
+                    </div>
+                    <Link to='/peliculas'>Peliculas</Link>
+                    <Link to='/recientes'>Recientes</Link>
+                    <Link to='/populares'>Populares</Link>
+                    <Link to='/estrenos'>Próximamente</Link>
+                </div>
 
-            <div className='menuDer'>
-
-                <div className='niños'>
+                <div className="categoriesHeader">
+                    <Link to='/misterio'>Misterio</Link>
+                    <Link to='/terror'>Terror</Link>
+                    <Link to='/comedia'>Comedia</Link>
+                    <Link to='/drama'>Drama</Link>
+                    <Link to='/accion'>Acción</Link>
+                    <Link to='/documental'>Documental</Link>
+                    <Link to='/clasicos'>Clásicos</Link>
                     <Link to='/niños'>Niños</Link>
                 </div>
 
-                <div className='profile'>
-                    <Link to='/profile'>Profile</Link>
+                <div className='menuDer'>
+                    <Link to='/profile'><img className="imgLogoProfile" src="Images/yuy.png" alt="logoProfile"></img></Link>
+                    {esAdmin && <Link to='/admin'>Admin</Link>}
+                    {<Link to='/' onClick={logout}>Cerrar sesión</Link>}
                 </div>
-n
-                {esAdmin && <div className="admin">
-                    <Link to='/admin'>Admin</Link>
-                </div>}
-
-                {<div className="logout" type="link" onClick={logout}>
-                    <Link to='/'>Cerrar sesión</Link>
-                </div>}
-
             </div>
-        </div>
+
+        </>
     )
 
 }

@@ -24,7 +24,7 @@ function DramaMoviesCarousel() {
         
     
     useEffect(() => {
-          axios.get('http://localhost:3000/searchByGenre?genre=18')
+          axios.get(`${process.env.REACT_APP_APIURL}/searchByGenre?genre=18`)
             .then((res) => {
                 console.log(res.data)
                 setMovies(res.data);
