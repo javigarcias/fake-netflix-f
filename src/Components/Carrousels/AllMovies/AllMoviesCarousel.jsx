@@ -29,8 +29,9 @@ function AllMoviesCarousel() {
                 console.log(res.data)
                 setMovies(res.data);
                 console.log(setMovies);
+            
     
-            })
+            }).catch(error => console.log())
      }, []);
      
     

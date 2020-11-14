@@ -30,7 +30,7 @@ function KidsMoviesCarousel() {
                 setMovies(res.data);
                 console.log(setMovies);
     
-            })
+            }).catch(error => console.log())
      }, []);
      
     

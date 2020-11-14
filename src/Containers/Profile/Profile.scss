@@ -9,19 +9,66 @@
     flex-direction: column;
     color: white;
 }
+.userOrder{
+    display: flex;
+    justify-content: start;;
+    align-items: start;
+    flex-direction: column;
+
+    width: 80%;
+    height: 12%;
+    font-size: 1.5em;
+}
+.order{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 80%;
+    
+    
+}
 .cardOrder{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 3em;
-    width: 1em;
-    background-color: hotpink;
+    height: 30em;
+    width: 15em;
+    
+    margin-bottom: 7em;
+    
+}
+
+.titleCard{
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 0.3em;
+   
+}
+.image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
 }
 .imageCard{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 15em;
+    height: 10em;
+    margin-top: em;
      
+}
+.alqdata{
+    margin-top: -1em;
+}
+.devdata{
+    margin-top: -1em;
+}
+.precio{
+    font-weight: bold;
+    margin-top: 1em;
+
 }
