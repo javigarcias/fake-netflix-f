@@ -21,14 +21,19 @@
         display: flex;
         background-color: rgba(0, 0, 0, 0.801);
         color: white;
-        justify-content: space-evenly;
+        justify-content: center;
+        flex-direction: column;
         align-items: center;
         padding: 0.5em;
         margin: 0.5em;
         width: 20%;
-        height: 15em;
+        // height: 20em;
         border-radius: 5px;
         border: 1px solid grey;
+
+        .cardMoviesColumn {
+            display: flex;
+        }
     }
 
     .cardMovies:hover {
@@ -50,10 +55,24 @@
     .textoMovies {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        // justify-content: center;
+        // align-items: center;
         text-align: center;
         font-family: Arial, Helvetica, sans-serif;
         width: 50%;
     }
+
+    .footerMovies {
+        display: flex;
+        margin: 0.5em;
+
+        button {
+            background-color: red;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 1em;
+        }
+    }
 }
+
