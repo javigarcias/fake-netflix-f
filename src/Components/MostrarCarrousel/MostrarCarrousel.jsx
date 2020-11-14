@@ -4,6 +4,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import axios from 'axios';
+import { connect } from 'react-redux';
+import { RENT } from '../../Redux/types';
 import './MostrarCarrousel.scss';
 import { Button, Modal } from 'antd';
 import dayjs from 'dayjs'
