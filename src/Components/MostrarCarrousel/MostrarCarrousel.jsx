@@ -13,10 +13,15 @@ export default function MostrarCarrousel({endpoint}) {
     const config = {
 
         dots: false,
+        arrows:false,
         infinite:true,
         adaptativeHeight: false,
+        autoplay: true,
+      speed: 4000,
+      autoplaySpeed: 1000,
+      cssEase: "linear",
         slidesToShow: 6,
-        slidesToScroll: 5
+        slidesToScroll: 1
         
       };
 
@@ -51,9 +56,11 @@ export default function MostrarCarrousel({endpoint}) {
             <div className='movie-card' id="movie-card">
              <div className='title'><p><strong>{movie.title}</strong></p></div>
              <div className='popularity'><strong>Popularidad:</strong> {movie.popularity}</div><br></br>
-             <div className='vote'><strong>Valoración/precio:</strong> {movie.vote_average}</div>
-             <div className="rentButtonBox">
-                           <button type="button" className="rentButton">ALQUILAR</button>
+             <div className='vote'><strong>Precio:</strong> {movie.vote_average} €</div>
+             <div className="rentButtonBox" id="rentButtonBox">
+                           <button type="button" className="rentButton"><b>Alquilar</b></button>
+                           
+                           <button type="button" className="infoButton"><b>+Info</b></button>
                        </div>
              </div></div>
 
