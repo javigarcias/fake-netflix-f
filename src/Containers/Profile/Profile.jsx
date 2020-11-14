@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import axios from 'axios';
 import { connect } from 'react-redux';
 import { USER_ORDERS } from '../../Redux/types';
+import dayjs from 'dayjs';
 
 
 import './Profile.scss';
@@ -37,13 +38,13 @@ const Profile = ({ dispatch, user, orders }) => {
                                 <h4>FECHA ALQUILER</h4>
                             </div>
                             <div className="alqdata">
-                                {order.rentalDate}
+                                {dayjs(order.rentalDate).format('DD-MM-YYYY')}
                                 </div>
                             <div className="dev">
                                 <h4>FECHA DEVOLUCIÓN</h4>
                             </div>
                             <div className="devdata">
-                                {order.rentalEndDate}
+                            {dayjs(order.rentalEndDate).format('DD-MM-YYYY')}
                             </div>
                             <div className="precio">{order.movieId.vote_average} €</div>
                         </div>
