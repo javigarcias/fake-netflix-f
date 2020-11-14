@@ -1,3 +1,4 @@
+import 'antd/dist/antd.css';
 import React, { Component } from 'react'
 import Home from './Containers/Home/Home'
 import { BrowserRouter, Route } from 'react-router-dom'

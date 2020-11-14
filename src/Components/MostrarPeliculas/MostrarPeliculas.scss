@@ -1,11 +1,16 @@
 .padreMovies {
-    height: 100vh;
+    height: 100%;
     width: 100%;
-    background: rgb(0,0,0);
-    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7035189075630253) 51%, rgba(0,0,0,0.008841036414565795) 100%);
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.7035189075630253) 51%,
+        rgba(0, 0, 0, 0.008841036414565795) 100%
+    );
     background-color: rgb(43, 42, 42);
 
-    .containerMovies{
+    .containerMovies {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -16,16 +21,31 @@
         display: flex;
         background-color: rgba(0, 0, 0, 0.801);
         color: white;
-        justify-content: space-evenly;
+        justify-content: center;
+        flex-direction: column;
         align-items: center;
         padding: 0.5em;
         margin: 0.5em;
         width: 20%;
-        height: 15em;
+        // height: 20em;
         border-radius: 5px;
         border: 1px solid grey;
+
+        .cardMoviesColumn {
+            display: flex;
+        }
     }
-    
+
+    .cardMovies:hover {
+        transform: scale(1.3);
+        margin: 2em 2em 0em 2em;
+        border: outset 0.1em rgba(255, 255, 255, 0.712);
+
+        border-radius: 0.2em;
+        transition: 0.4s ease-in-out;
+        // transition-delay: 0.4s;
+    }
+
     .moviesPoster {
         height: 15em;
         border-radius: 1em;
@@ -35,10 +55,24 @@
     .textoMovies {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        // justify-content: center;
+        // align-items: center;
         text-align: center;
         font-family: Arial, Helvetica, sans-serif;
         width: 50%;
     }
+
+    .footerMovies {
+        display: flex;
+        margin: 0.5em;
+
+        button {
+            background-color: red;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 1em;
+        }
+    }
 }
+
