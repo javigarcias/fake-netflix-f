@@ -59,19 +59,19 @@ export default function AdminOrders() {
                                     </p>
 
                                     <p>
-                                        Inicio alquiler: {dayjs(order.rentalDate).format('DD-MM-YYYY')}
+                                        Inicio alquiler: <br/>{dayjs(order.rentalDate).format('DD-MM-YYYY')}
                                     </p>
 
                                     <p>
-                                        Fin alquiler: {dayjs(order.rentalEndDate).format('DD-MM-YYYY')}
+                                        Fin alquiler: <br/>{dayjs(order.rentalEndDate).format('DD-MM-YYYY')}
                                     </p>
 
                                     <p>
-                                        Alquilada por: {order.userId?.name} {order.userId?.surname}
+                                        Alquilada por: <br/>{order.userId?.name} {order.userId?.surname}
                                     </p>
 
                                     <p>
-                                        Precio: {order.movieId.title}
+                                        Precio: <br/>{order.movieId.vote_average} €
                                     </p>
 
                                 </div>
