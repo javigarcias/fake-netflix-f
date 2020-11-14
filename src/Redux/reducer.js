@@ -1,9 +1,10 @@
-const {USER_ORDERS, LOGIN, LOGOUT} = require("./types");
+const {USER_ORDERS, LOGIN, LOGOUT, RENT_MOVIE} = require("./types");
 
 
 const initialState ={
     orders: [],
-    user: {}
+    user: {},
+    movie: {}
 }
 
 const reducer = (state=initialState, action) => {
@@ -23,6 +24,11 @@ const reducer = (state=initialState, action) => {
                 ...state,
                 user: {}
             }
+        case RENT_MOVIE:
+           return{
+            ...state,
+            movie: action.payload
+        }
         default:
             return state
     }
