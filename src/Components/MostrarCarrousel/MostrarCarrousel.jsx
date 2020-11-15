@@ -10,6 +10,7 @@ import dayjs from 'dayjs'
 
 
 
+
 export default function MostrarCarrousel({ endpoint }) {
 
     const config = {
@@ -46,24 +47,33 @@ export default function MostrarCarrousel({ endpoint }) {
             }
         }
         fnc();
-    },[]);
+    }, []);
 
 
+    const rent = async (movie) => {
+        const userLog = JSON.parse(localStorage.getItem('usuario'));
+        console.log(userLog)
+        let orderBody = {
+            userId: userLog.userId,
+            movieId: movie.id
+        };
+        await axios.post('http://localhost:3000/order/rent', orderBody)
+    };
 
     return (
         <>
             <Slider {...config}>
                 {movies?.map(movie => {
-                
+    
                     return <div className="wrapper"><div key={movie._id} className="img-card">
-
+    
                         <div className="imghover"> <img className="img" id="img" src={!movie.poster_path ? 'Images/notfound.png' : `https://image.tmdb.org/t/p/w200/${movie.poster_path}`} alt='poster_path' />
-
+    
                             <div className='movie-card' id="movie-card">
                                 <div className='title'><p><strong>{movie.title}</strong></p></div>
                                 <div className='vote'><strong>Precio:</strong> {movie.vote_average} €</div>
                                 <div className="rentButtonBox" id="rentButtonBox">
-
+    
                                     <Button
                                         style={{
                                             border: "none",
@@ -71,9 +81,9 @@ export default function MostrarCarrousel({ endpoint }) {
                                             color: "white",
                                             marginRight: "1em",
                                             borderRadius: "5px"
-                                        }}>
+                                        }} onClick={() => { rent(movie) }}>
                                         Alquilar
-                                </Button>
+                                    </Button>
                                     <Button
                                         style={{
                                             border: "none",
@@ -83,15 +93,15 @@ export default function MostrarCarrousel({ endpoint }) {
                                             borderRadius: "5px"
                                         }} onClick={() => { setShowModal(true); setShowMovieActual(movie) }}>
                                         +info
-                                    </Button>
-
+                                        </Button>
+    
                                 </div>
                             </div>
                         </div>
                     </div>
                     </div>
                 })}
-
+    
             </Slider>
             <Modal
                 visible={showModal}
@@ -115,8 +125,8 @@ export default function MostrarCarrousel({ endpoint }) {
                 <p>{showMovieActual.overview}</p>
                 <p>Día de salida: <br /> {dayjs(showMovieActual.release_date).format('DD-MM-YYYY')}</p>
                 <p>Precio: <br /> {showMovieActual.vote_average} €</p>
-
-
+    
+    
                 <div className="footerMovie">
                     <Button
                         style={{
@@ -126,8 +136,8 @@ export default function MostrarCarrousel({ endpoint }) {
                             marginRight: "1em",
                             borderRadius: "5px"
                         }}>Alquilar
-                        </Button>
-
+                            </Button>
+    
                     <Button
                         onClick={() => setShowModal(false)}
                         style={{
@@ -136,11 +146,16 @@ export default function MostrarCarrousel({ endpoint }) {
                             color: "white",
                             borderRadius: "5px"
                         }}>Cerrar
-                        </Button>
+                            </Button>
                 </div>
-
+    
             </Modal>
         </>
     )
+    
+    }
+    
 
-}
+
+
+

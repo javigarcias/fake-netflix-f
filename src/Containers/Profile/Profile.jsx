@@ -57,7 +57,7 @@ const Profile = ({ dispatch, user, orders }) => {
     )
 }
 const mapStateToProps = state => {
-    console.log(state.user)
+    
     return {
         user: state.user,
         orders: state.orders
