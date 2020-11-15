@@ -81,7 +81,7 @@ export default function MostrarCarrousel({ endpoint }) {
                                             color: "white",
                                             marginRight: "1em",
                                             borderRadius: "5px"
-                                        }}>
+                                        }} onClick={() => { rent(movie) }}>
                                         Alquilar
                                     </Button>
                                     <Button
