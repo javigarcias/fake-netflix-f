@@ -32,7 +32,8 @@ const Search = (props) => {
         //console.log(event.target, search);
     }
 
-    const [showMovieActual, setShowMovieActual] = useState({})
+    const [showMovieActual, setShowMovieActual] = useState({});
+    const userLog = JSON.parse(localStorage.getItem('usuario'));
 
 
 
@@ -46,7 +47,7 @@ const Search = (props) => {
     }
     const rent = async (movie) => {
         
-        console.log(userLog)
+        
         let orderBody = {
             userId: userLog.userId,
             movieId: movie.id
@@ -113,7 +114,7 @@ const Search = (props) => {
                             color: "white",
                             marginRight: "1em",
                             borderRadius: "5px"
-                        }}onClick={() => { rent(movie) }}>Alquilar
+                        }}onClick={() => { rent(showMovieActual) }}>Alquilar
                         </Button>
 
                     <Button
