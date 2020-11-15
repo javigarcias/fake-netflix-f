@@ -4,9 +4,9 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import axios from 'axios';
-import { connect } from 'react-redux';
-import { RENT } from '../../Redux/types';
+
 import './MostrarCarrousel.scss';
+
 
 
 
@@ -28,23 +28,35 @@ export default function MostrarCarrousel({ endpoint }) {
     };
 
     const [movies, setMovies] = useState([]);
-
+    
+    
     useEffect(() => {
-
+        
         const fnc = async () => {
             try {
-
+                
                 let respuesta = await axios.get(endpoint);
-
+                
                 setMovies(respuesta.data);
-
+                
             } catch (error) {
                 console.log(error);
             }
         }
         fnc();
     });
+    
+    
+    const rent = async (movie) => {
+        const userLog = JSON.parse(localStorage.getItem('usuario'));
+        console.log(userLog)
+        let orderBody = {
+            userId: userLog.userId,
+            movieId: movie.id           
+        };
+        await axios.post('http://localhost:3000/order/rent', orderBody)
 
+    }
 
 
     return (
@@ -60,9 +72,9 @@ export default function MostrarCarrousel({ endpoint }) {
                             <div className='popularity'><strong>Popularidad:</strong> {movie.popularity}</div><br></br>
                             <div className='vote'><strong>Precio:</strong> {movie.vote_average} €</div>
                             <div className="rentButtonBox" id="rentButtonBox">
-                                <button type="button" className="rentButton"><b>Alquilar</b></button>
+                                <button className="rentButton" onClick={()=>{rent(movie._id)}}><b>Alquilar</b></button>
 
-                                <button type="button" className="infoButton"><b>+Info</b></button>
+                                <button className="infoButton"><b>+Info</b></button>
                             </div>
                         </div></div>
 
@@ -76,3 +88,5 @@ export default function MostrarCarrousel({ endpoint }) {
     )
 
 }
+
+
