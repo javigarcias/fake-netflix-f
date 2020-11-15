@@ -1,10 +1,26 @@
 input[type=text] {
-    width: 8em;
-    -webkit-transition: width 0.4s ease-in-out;
-    transition: width 0.4s ease-in-out;
+  width: 100%;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.7035189075630253) 51%,
+      rgba(0, 0, 0, 0.008841036414565795) 100%
+  );
+  background-color: rgb(43, 42, 42);
+  color:white;
   }
   
-  /* When the input field gets focus, change its width to 100% */
-  input[type=text]:focus {
-    width: 100%;
+  
+  .moviesByTitle{
+
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.7035189075630253) 51%,
+        rgba(0, 0, 0, 0.008841036414565795) 100%
+    );
+    background-color: rgb(43, 42, 42);
+  color:white;
   }

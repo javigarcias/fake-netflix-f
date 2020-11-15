@@ -1,4 +1,4 @@
-const {USER_ORDERS, LOGIN, LOGOUT, RENT,} = require("./types");
+const {USER_ORDERS, LOGIN, LOGOUT, RENT, CALL_MOVIES} = require("./types");
 
 
 const initialState ={
@@ -26,6 +26,11 @@ const reducer = (state=initialState, action) => {
                 ...state,
                 user: {}
             }
+            case CALL_MOVIES:
+                return{
+                    ...state,
+                    movies: action.payload
+                }    
         case RENT:
             return{
                 ...state,
