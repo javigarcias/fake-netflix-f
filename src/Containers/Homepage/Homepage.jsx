@@ -1,15 +1,14 @@
 import React from 'react';
+
+
 import './Homepage.scss';
 
-export default function Homepage () {
-  
+const Homepage = () => {
+
     return (
-        <div className="homepage">
-            
-        </div>
-            
+        <div className="homepage"><h3>Homepage</h3></div>
     )
-   
-    
 }
+
+export default Homepage;
 

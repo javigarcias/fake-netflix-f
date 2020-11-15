@@ -1,0 +1,66 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.151) 0%, rgba(0, 0, 0, 0.829) 51%, rgba(0, 0, 0, 0.048) 100%);
+    background-color: rgb(43, 42, 42);
+    width: 100%;
+}
+
+.imgLogoHeader {
+    width: 7.5em;
+    height: 2.7em;
+}
+.menuIzq {
+    display: flex;
+    align-items: center;
+    margin-top: 1em;
+
+    a {
+        all: unset;
+        color: white;
+        padding: 0.5em;
+        cursor: pointer;
+        &:hover {
+            color: #cdcdcd;
+        }
+    }
+}
+
+.categoriesHeader {
+    display: flex;
+    align-items: center;
+    margin-top: 1em;
+
+    a {
+        all: unset;
+        color: white;
+        padding: 0.5em;
+        cursor: pointer;
+        &:hover {
+            color: #cdcdcd;
+        }
+    }
+}
+
+.menuDer {
+    display: flex;
+    align-items: center;
+    margin-top: 1em;
+
+    .imgLogoProfile {
+        width: 2em;
+        height: 2em;
+        border-radius: 2px;
+    }
+
+    a {
+        all: unset;
+        color: white;
+        padding: 0.5em;
+        cursor: pointer;
+        &:hover {
+            color: #cdcdcd;
+        }
+    }
+}

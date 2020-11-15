@@ -1,0 +1,130 @@
+
+.wrapper{
+    width: 80%;
+    height: 60vh;
+    display: flex;
+    padding: 2em;
+    margin-bottom: -1em;
+    flex-direction: row;
+    justify-content: center;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7035189075630253) 51%, rgba(0,0,0,0.008841036414565795) 100%);
+    background-color: rgb(43, 42, 42);
+    
+    text-align: center;
+  }
+  
+  
+  .img-card {
+    
+    height: 2em;
+    width: 15em;
+    display: table;
+    table-layout: fixed;
+    border-collapse: collapse;
+    padding: 1em; 
+     border-radius: 0.2em;
+     margin: 1em ;
+  
+    transition: 0.1s ease-in-out; 
+    
+  }
+  .img-card:hover{
+    transform: scale(1.1);
+    margin: 1.5em 0.5em 0em 1em;
+   border: outset 0.1em rgba(255, 255, 255, 0.712);
+  
+  border-radius: 0.2em;
+    transition:  0.3s ease-in-out; 
+    transition-delay: 0.1s;
+  }
+  
+  .imghover #movie-card{
+    
+    height: 0.1vh;
+    background-color: rgba(0, 0, 0, 0);
+    transition-delay: 0.2s;
+    color: rgba(0, 0, 0, 0);
+    
+    
+    
+  }
+  .imghover:hover #movie-card{
+    height: 100%;
+    color: white;
+    background-color: rgb(24, 23, 23);
+    border-top: inset 0.3em white;
+    box-shadow: inset 0.063em 0.500em 1.5em 0em rgba(143, 142, 143, 0.46);
+    transition-delay: 0.1s;
+  }
+
+  .imghover:hover #rentButtonBox{
+    transition-delay: 0.4s;
+
+    display: block;
+
+  }
+  
+  #movie-card{
+    
+    height: 1em;
+    font-size: small;
+    // text-align: start;
+    line-height: 1.1em;
+    background-color: rgb(37, 35, 35); 
+    border-radius: 0.2em;
+    // padding: 0em 1em 1em 1em;
+    
+    
+    
+  }
+  
+  
+  .img{
+    
+    height: 20em;
+    width: 15em;
+    border: inset 0.4em rgba(0, 0, 0, 0.27);
+    border-radius: 1em;
+    
+  }
+  
+  
+  
+  .title{
+    font-size: x-small;
+    text-align: center;
+    
+  }
+
+  #rentButtonBox {
+    margin-top: 0.8em;
+    display:none;
+    transition-delay: 0.4s;
+  }
+
+// .rentButton {
+//   height: 1.5em;
+//   width: 5.5em;
+//   margin-right: 0.5em;
+//   background-color: rgba(241, 4, 4, 0.658);
+//   border-radius: 1em;
+//   color:rgba(255, 255, 255, 0.877);
+// }
+  
+.infoButton {
+  height: 1.5em;
+  width: 4.5em;
+  background-color: rgba(241, 4, 4, 0.658);
+  border-radius: 1em;
+  color:rgba(255, 255, 255, 0.877);
+}
+  
+  .slick-arrow.slick-prev {
+    padding: 0px 0px 10px 5px;
+    z-index: 1;
+  }
+  .slick-arrow.slick-next {
+    padding: 0px 0px 180px 100px;
+    z-index: 1;}
+

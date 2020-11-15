@@ -1,19 +1,17 @@
 .backgroundHome {
-    // background-image: url(https://imgur.com/JUwE3TX.jpg);
-    background: url(https://imgur.com/JUwE3TX.jpg) no-repeat center center fixed;
-    background-size: cover;
-    height: 100%;
-    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    background-image: url(https://imgur.com/JUwE3TX.jpg);
 
     .gradientHome {
-        width: 100vw;
-        height: 100vh;
+        width: 100%;
+        height: 100%;
         background: rgb(0, 0, 0);
         background: linear-gradient(
             180deg,
-            rgba(0, 0, 0, 0.966) 0%,
-            rgba(0, 0, 0, 0.747) 36%,
-            rgba(0, 0, 0, 0.664) 63%
+            rgba(0, 0, 0, 0.678) 0%,
+            rgba(0, 0, 0, 0.623) 36%,
+            rgba(0, 0, 0, 0.527) 63%
         );
 
         .main-header {
@@ -34,10 +32,12 @@
             display: flex;
             align-items: center;
             text-align: center;
-            font-family: Arial, Helvetica, sans-serif ;
+            font-family: Arial, Helvetica, sans-serif;
             color: white;
+            font-weight: bolder;
             flex-direction: column;
             width: 100%;
+            // height: 100%;
 
             .textHome {
                 width: 50%;
@@ -60,34 +60,36 @@
             justify-content: center;
             align-items: center;
             padding: 1.5em;
-            width: 100%;
+            height: 4em;
+            width: 50%;
 
             .emailHome {
-                width: 40em;
-                height: 5em;
-                border-radius: 5px;
+                width: 100%;
+                height: 2em;
+                border-radius: 5px 0 0 5px;
+                border: none;
+                font-size: 1.5em;
+                color: black;
             }
             .botonEmpezar {
+                display: flex;
+                align-items: center;
                 background-color: red;
                 color: white;
-                border: none ;
-            
+                border: none;
                 text-align: center;
-                
-                display: inline-block;
                 font-size: 2em;
                 padding: 0.5em 1em;
-                height: 2.2em;
-                width: 7em;
-            
-                border-radius: 5px;
+                height: 1.5em;
+                // width: 7em;
+
+                border-radius: 0 5px 5px 0;
                 transition: all 0.2s ease-in-out;
             }
-            
+
             .botonEmpezar:hover {
                 background-color: rgb(255, 23, 23);
             }
-            
         }
     }
 }
