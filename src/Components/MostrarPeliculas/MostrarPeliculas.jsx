@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './MostrarPeliculas.scss';
 import dayjs from 'dayjs';
-import { Button, Modal } from 'antd'
+import { Button, Modal } from 'antd';
+import {useHistory} from 'react-router-dom';
 
 
 export default function MostrarPeliculas({ endpoint }) {
@@ -11,6 +12,7 @@ export default function MostrarPeliculas({ endpoint }) {
     const [showModal, setShowModal] = useState(false);
     const [showMovieActual, setShowMovieActual] = useState({});
     const userLog = JSON.parse(localStorage.getItem('usuario'));
+    const history = useHistory();
 
 
     useEffect(() => {
@@ -36,7 +38,8 @@ export default function MostrarPeliculas({ endpoint }) {
             userId: userLog.userId,
             movieId: movie.id
         };
-        await axios.post('http://localhost:3000/order/rent', orderBody)
+        await axios.post('http://localhost:3000/order/rent', orderBody);
+        history.push('/profile');
     };
 
 

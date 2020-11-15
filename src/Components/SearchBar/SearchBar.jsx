@@ -4,7 +4,8 @@ import axios from 'axios';
 import { connect } from 'react-redux';
 import { CALL_MOVIES } from '../../Redux/types';
 import { Button, Modal } from 'antd';
-import dayjs from 'dayjs'
+import dayjs from 'dayjs';
+import {useHistory} from 'react-router-dom';
 
 const Search = (props) => {
 
@@ -22,7 +23,8 @@ const Search = (props) => {
 
 
 
-    const [search, setSearch] = useState("")
+    const [search, setSearch] = useState("");
+    const history = useHistory();
 
 
     const searchMovies = event => {
@@ -42,6 +44,16 @@ const Search = (props) => {
             return result.map(movie => <div className="movies1" onClick={() => { setShowMovieActual(movie); setShowModal(true) }}>
                 <div>{movie.title}</div></div>)
     }
+    const rent = async (movie) => {
+        
+        console.log(userLog)
+        let orderBody = {
+            userId: userLog.userId,
+            movieId: movie.id
+        };
+        await axios.post('http://localhost:3000/order/rent', orderBody);
+        history.push('/profile');
+    };
 
 
     const [showModal, setShowModal] = useState(false)

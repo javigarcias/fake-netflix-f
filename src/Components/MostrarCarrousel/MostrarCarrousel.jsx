@@ -6,7 +6,8 @@ import "slick-carousel/slick/slick-theme.css";
 import axios from 'axios';
 import './MostrarCarrousel.scss';
 import { Button, Modal } from 'antd';
-import dayjs from 'dayjs'
+import dayjs from 'dayjs';
+import {useHistory} from 'react-router-dom';
 
 
 
@@ -33,6 +34,7 @@ export default function MostrarCarrousel({ endpoint }) {
     const [showModal, setShowModal] = useState(false);
     const [showMovieActual, setShowMovieActual] = useState({});
     const userLog = JSON.parse(localStorage.getItem('usuario'));
+    const history = useHistory();
 
     useEffect(() => {
 
@@ -58,7 +60,8 @@ export default function MostrarCarrousel({ endpoint }) {
             userId: userLog.userId,
             movieId: movie.id
         };
-        await axios.post('http://localhost:3000/order/rent', orderBody)
+        await axios.post('http://localhost:3000/order/rent', orderBody);
+        history.push('/profile');
     };
 
     return (
