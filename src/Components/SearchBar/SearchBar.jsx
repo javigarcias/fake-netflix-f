@@ -113,7 +113,7 @@ const Search = (props) => {
                             color: "white",
                             marginRight: "1em",
                             borderRadius: "5px"
-                        }}>Alquilar
+                        }}onClick={() => { rent(movie) }}>Alquilar
                         </Button>
 
                     <Button
