@@ -34,7 +34,7 @@ function App() {
 
             <Route path="/homepage" exact>
                 <Header />
-                
+                <Search />
                 <MostrarCarrousel endpoint={`${process.env.REACT_APP_APIURL}/showMovies`}/>
                 <MostrarCarrousel endpoint={`${process.env.REACT_APP_APIURL}/showMoviesNewest`}/>
                 <MostrarCarrousel endpoint={`${process.env.REACT_APP_APIURL}/showMoviesOldest`}/>

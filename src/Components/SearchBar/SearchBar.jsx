@@ -39,10 +39,9 @@ import dayjs from 'dayjs'
               return movie.title.toLowerCase().indexOf(search.toLowerCase()) !== -1
           })
           if (search !== "")
-            return result.map(movie => <div className="movies" onClick={() => setShowMovieActual(movie)}>
-                 <div className= "movieResult" onClick={showModal}></div>
-                 </div>)
-    }
+          return result.map(movie => <div className="movies" onClick={() => setShowMovieActual(movie)}>
+              <div>{movie.title}</div></div>)
+  }
   
   
   
