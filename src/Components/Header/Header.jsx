@@ -18,7 +18,8 @@ const Header = () => {
                 headers: { Authorization: user?.token }
             };
 
-            dispatch({ type: LOGOUT })
+            dispatch({ type: LOGOUT });
+            localStorage.clear();
 
             await axios.get(`${process.env.REACT_APP_APIURL}/user/logout`, header);
 
