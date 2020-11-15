@@ -6,7 +6,7 @@ import './Home.scss';
 
 export default function Home() {
 
-    const history = useHistory(); 
+    const history = useHistory();
 
     const pulsaEmpezar = async (event) => {
 
