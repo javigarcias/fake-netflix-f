@@ -6,56 +6,48 @@ import { CALL_MOVIES } from '../../Redux/types';
 import { Button, Modal } from 'antd';
 import dayjs from 'dayjs'
 
-  const Search = (props) => {
-    
+const Search = (props) => {
+
 
     useEffect(() => {
-        
+
         axios.get(`${process.env.REACT_APP_APIURL}/showMovies`)
-        .then(res => {
-          props.dispatch({ type: CALL_MOVIES, payload: res.data });
-      }).catch((err) => {
-          console.log(err)
-      });
-  // eslint-disable-next-line
-}, [])
-
-   
-  
-      const [search, setSearch] = useState("")
-  
-  
-      const searchMovies = event => {
-          setSearch(event.target.value)
-          //console.log(event.target, search);
-      }
-  
-      const [showMovieActual, setShowMovieActual] = useState({})
-  
-  
-  
-      const searchEngine = (props) => {
-          const result = props.movies?.filter(movie => {
-              return movie.title.toLowerCase().indexOf(search.toLowerCase()) !== -1
-          })
-          if (search !== "")
-          return result.map(movie => <div className="movies" onClick={() => setShowMovieActual(movie)}>
-              <div>{movie.title}</div></div>)
-  }
-  
-  
-  
-      const [showModal, setShowModal] = useState(false)
-  
-  
-
-  
-  
-  
+            .then(res => {
+                props.dispatch({ type: CALL_MOVIES, payload: res.data });
+            }).catch((err) => {
+                console.log(err)
+            });
+        // eslint-disable-next-line
+    }, [])
 
 
 
-      return (
+    const [search, setSearch] = useState("")
+
+
+    const searchMovies = event => {
+        setSearch(event.target.value)
+        //console.log(event.target, search);
+    }
+
+    const [showMovieActual, setShowMovieActual] = useState({})
+
+
+
+    const searchEngine = (props) => {
+        const result = props.movies?.filter(movie => {
+            return movie.title.toLowerCase().indexOf(search.toLowerCase()) !== -1
+        })
+        if (search !== "")
+            return result.map(movie => <div className="movies1" onClick={() => { setShowMovieActual(movie); setShowModal(true) }}>
+                <div>{movie.title}</div></div>)
+    }
+
+
+    const [showModal, setShowModal] = useState(false)
+
+
+    return (
         <>
             <div className="body">
                 <div className="background">
@@ -69,14 +61,14 @@ import dayjs from 'dayjs'
                             {searchEngine(props)}
                         </div>
 
-                        
+
 
                     </div>
                 </div>
 
 
             </div>
-            
+
             <Modal
                 visible={showModal}
                 onOk={() => setShowModal(false)}
@@ -124,7 +116,7 @@ import dayjs from 'dayjs'
                 </div>
 
             </Modal>
-            
+
         </>
     )
 
