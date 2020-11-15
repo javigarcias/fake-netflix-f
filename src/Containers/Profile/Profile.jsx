@@ -22,9 +22,9 @@ const Profile = ({ dispatch, user, orders }) => {
     return (
         <div className='profileView'>
             <div className="userOrder">
-                <div className="userName">{user.name} {user.surname}</div>
-                <div className="userEmail">{user.email}</div>
-                <div className="userAdress">{user.address}</div>
+                <div className="userName">Nombre y Apellidos: {user.name} {user.surname}</div>
+                <div className="userEmail">email: {user.email}</div>
+                <div className="userAdress">Dirección: {user.address}</div>
             </div>
             <div className="order">
                 {orders?.map(order =>
@@ -34,15 +34,11 @@ const Profile = ({ dispatch, user, orders }) => {
                             <img className="imageCard" src={'https://image.tmdb.org/t/p/w500' + order.movieId.poster_path} />
                         </div>
                         <div className="infoCard">
-                            <div className="alq">
-                                <h4>FECHA ALQUILER</h4>
-                            </div>
+                            <div className="alq">FECHA ALQUILER</div>
                             <div className="alqdata">
                                 {dayjs(order.rentalDate).format('DD-MM-YYYY')}
                                 </div>
-                            <div className="dev">
-                                <h4>FECHA DEVOLUCIÓN</h4>
-                            </div>
+                            <div className="dev">FECHA DEVOLUCIÓN</div>
                             <div className="devdata">
                             {dayjs(order.rentalEndDate).format('DD-MM-YYYY')}
                             </div>
