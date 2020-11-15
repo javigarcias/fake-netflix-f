@@ -31,7 +31,8 @@ export default function MostrarCarrousel({ endpoint }) {
     const [movies, setMovies] = useState([]);
 
     const [showModal, setShowModal] = useState(false);
-    const [showMovieActual, setShowMovieActual] = useState({})
+    const [showMovieActual, setShowMovieActual] = useState({});
+    const userLog = JSON.parse(localStorage.getItem('usuario'));
 
     useEffect(() => {
 
@@ -51,7 +52,7 @@ export default function MostrarCarrousel({ endpoint }) {
 
 
     const rent = async (movie) => {
-        const userLog = JSON.parse(localStorage.getItem('usuario'));
+        
         console.log(userLog)
         let orderBody = {
             userId: userLog.userId,

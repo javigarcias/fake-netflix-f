@@ -9,7 +9,9 @@ export default function MostrarPeliculas({ endpoint }) {
 
     const [movies, setMovies] = useState([]);
     const [showModal, setShowModal] = useState(false);
-    const [showMovieActual, setShowMovieActual] = useState({})
+    const [showMovieActual, setShowMovieActual] = useState({});
+    const userLog = JSON.parse(localStorage.getItem('usuario'));
+
 
     useEffect(() => {
 
@@ -26,6 +28,16 @@ export default function MostrarPeliculas({ endpoint }) {
         }
         fnc();
     }, []);
+
+    const rent = async (movie) => {
+        
+        console.log(userLog)
+        let orderBody = {
+            userId: userLog.userId,
+            movieId: movie.id
+        };
+        await axios.post('http://localhost:3000/order/rent', orderBody)
+    };
 
 
     return (
@@ -99,7 +111,7 @@ export default function MostrarPeliculas({ endpoint }) {
                                 color: "white",
                                 marginRight: "1em",
                                 borderRadius: "5px"
-                            }}>Alquilar
+                            }}onClick={() => { rent(showMovieActual) }}>Alquilar
                         </Button>
 
                         <Button
