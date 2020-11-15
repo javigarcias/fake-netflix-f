@@ -1,7 +1,7 @@
 
 .wrapper{
     width: 80%;
-    height: 58vh;
+    height: 60vh;
     display: flex;
     padding: 2em;
     margin-bottom: -1em;
@@ -17,8 +17,8 @@
   
   .img-card {
     
-    height: 10em;
-    width: 10.4em;
+    height: 2em;
+    width: 15em;
     display: table;
     table-layout: fixed;
     border-collapse: collapse;
@@ -68,12 +68,12 @@
   #movie-card{
     
     height: 1em;
-    font-size: xx-small;
-    text-align: start;
+    font-size: small;
+    // text-align: start;
     line-height: 1.1em;
     background-color: rgb(37, 35, 35); 
     border-radius: 0.2em;
-    padding: 0em 1em 1em 1em;
+    // padding: 0em 1em 1em 1em;
     
     
     
@@ -82,8 +82,8 @@
   
   .img{
     
-    height: 12.8em;
-    width: 10.3em;
+    height: 20em;
+    width: 15em;
     border: inset 0.4em rgba(0, 0, 0, 0.27);
     border-radius: 1em;
     
@@ -103,14 +103,14 @@
     transition-delay: 0.4s;
   }
 
-.rentButton {
-  height: 1.5em;
-  width: 5.5em;
-  margin-right: 0.5em;
-  background-color: rgba(241, 4, 4, 0.658);
-  border-radius: 1em;
-  color:rgba(255, 255, 255, 0.877);
-}
+// .rentButton {
+//   height: 1.5em;
+//   width: 5.5em;
+//   margin-right: 0.5em;
+//   background-color: rgba(241, 4, 4, 0.658);
+//   border-radius: 1em;
+//   color:rgba(255, 255, 255, 0.877);
+// }
   
 .infoButton {
   height: 1.5em;
@@ -127,3 +127,4 @@
   .slick-arrow.slick-next {
     padding: 0px 0px 180px 100px;
     z-index: 1;}
+

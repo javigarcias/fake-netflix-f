@@ -15,14 +15,12 @@ export default function AdminOrders() {
         const fnc = async () => {
 
             try {
-                // const usuario = JSON.parse(localStorage.getItem('usuario'));
-
                 const header = {
-                    headers: { Authorization: user.token }
+                    headers: { Authorization: user?.token }
                 };
-
-                let respuesta = await axios.get(`${process.env.REACT_APP_APIURL}/order/show`, header);
-
+          
+                let respuesta = await axios.get(`${process.env.REACT_APP_APIURL}/order/showAll`, header);
+                console.log(respuesta)
                 setOrders(respuesta.data);
 
             } catch (error) {
@@ -47,9 +45,8 @@ export default function AdminOrders() {
 
                             <div className="card">
 
-                                <img className="moviePoster" src={`https://image.tmdb.org/t/p/w200/${order.movieId.poster_path}`} alt="poster"></img>
-
-                                <div className="texto">
+                                <img className="moviePoster" src={!order.movieId.poster_path ? 'Images/notfound.png' : `https://image.tmdb.org/t/p/w200/${order.movieId.poster_path}`} alt="poster"></img>
+                                <div className="textoAdmin">
                                     <p>
                                         {order.movieId.title}
                                     </p>

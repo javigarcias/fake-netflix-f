@@ -1,5 +1,5 @@
 import 'antd/dist/antd.css';
-import React, { Component } from 'react'
+import React from 'react'
 import Home from './Containers/Home/Home'
 import { BrowserRouter, Route } from 'react-router-dom'
 import './App.css';
@@ -8,9 +8,9 @@ import Register from './Containers/Register/Register';
 import Header from './Components/Header/Header';
 import AdminOrders from './Containers/Admin/AdminOrders';
 import Profile from './Containers/Profile/Profile';
-import Search from './Components/SearchBar/SearchBar'
+import Search from './Components/SearchBar/SearchBar';
 import MostrarPeliculas from './Components/MostrarPeliculas/MostrarPeliculas';
-import MostrarCarrousel from './Components/MostrarCarrousel/MostrarCarrousel'
+import MostrarCarrousel from './Components/MostrarCarrousel/MostrarCarrousel';
 
 
 

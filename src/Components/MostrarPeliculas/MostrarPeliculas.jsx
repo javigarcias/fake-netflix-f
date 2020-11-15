@@ -9,6 +9,7 @@ export default function MostrarPeliculas({ endpoint }) {
 
     const [movies, setMovies] = useState([]);
     const [showModal, setShowModal] = useState(false);
+    const [showMovieActual, setShowMovieActual] = useState({})
 
     useEffect(() => {
 
@@ -46,9 +47,6 @@ export default function MostrarPeliculas({ endpoint }) {
                                             {movie.title}
                                         </p>
                                         <p>
-                                            {dayjs(movie.release_date).format('DD-MM-YYYY')}
-                                        </p>
-                                        <p>
                                             Precio: {movie.vote_average} €
                                         </p>
                                     </div>
@@ -60,7 +58,7 @@ export default function MostrarPeliculas({ endpoint }) {
                                     color: "white",
                                     marginTop: "1em",
                                     borderRadius: "5px"
-                                }} onClick={() => { setShowModal(true) }}>+info</Button>
+                                }} onClick={() => { setShowModal(true); setShowMovieActual(movie) }}>+info</Button>
 
                             </div>
                         )
@@ -70,7 +68,6 @@ export default function MostrarPeliculas({ endpoint }) {
 
                     
                 <Modal
-                    // title="Basic Modal"
                     visible={showModal}
                     onOk={() => setShowModal(false)}
                     onCancel={() => setShowModal(false)}
@@ -78,14 +75,21 @@ export default function MostrarPeliculas({ endpoint }) {
                     footer={null}
                     bodyStyle={{
                         background: "#282727",
-                        color: "white"
-
+                        color: "white",
+                        justifyContent: "center",
+                        textAlign: "center",
+                        fontFamily: "Arial, Helvetica, sans-serif",
+                        padding: "1em",
+                        fontSize: "1.3em"
                     }
                     }
                 >
-                    {/* <p>{movie.overview}</p> */}
-                    <p>Some contents...</p>
-                    <p>Some contents...</p>
+                    <img src={!showMovieActual.poster_path ? 'Images/notfound.png' : `https://image.tmdb.org/t/p/w200/${showMovieActual.poster_path}`} alt="poster"></img>
+                    <p>{showMovieActual.title}</p>
+                    <p>{showMovieActual.overview}</p>
+                    <p>Día de salida: <br/> {dayjs(showMovieActual.release_date).format('DD-MM-YYYY')}</p>
+                    <p>Precio: <br/> {showMovieActual.vote_average} €</p>
+                    
 
                     <div className="footerMovie">
                         <Button

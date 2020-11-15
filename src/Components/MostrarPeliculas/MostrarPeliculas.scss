@@ -55,11 +55,12 @@
     .textoMovies {
         display: flex;
         flex-direction: column;
-        // justify-content: center;
-        // align-items: center;
+        justify-content: center;
+        align-items: center;
         text-align: center;
         font-family: Arial, Helvetica, sans-serif;
         width: 50%;
+        font-size: 1.3em;
     }
 
     .footerMovies {

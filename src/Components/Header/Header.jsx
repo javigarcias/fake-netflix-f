@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link, useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 import './Header.scss';
 import { LOGOUT } from '../../Redux/types';
@@ -11,19 +11,14 @@ const Header = () => {
     const user = useSelector(state => state.user)
     const esAdmin = user?.role === 'admin';
 
-    
-
     const logout = async (event) => {
 
         try {
-            console.log('asfds')
             const header = {
                 headers: { Authorization: user?.token }
             };
 
-            console.log(dispatch)
             dispatch({ type: LOGOUT })
-
 
             await axios.get(`${process.env.REACT_APP_APIURL}/user/logout`, header);
 
