@@ -62,7 +62,7 @@ export default function MostrarPeliculas({ endpoint }) {
                                             {movie.title}
                                         </p>
                                         <p>
-                                            Precio: {movie.vote_average} €
+                                            {movie.vote_average > 0 && <>Precio: {movie.vote_average} €</>}
                                         </p>
                                     </div>
                                 </div>
