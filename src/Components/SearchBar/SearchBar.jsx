@@ -11,7 +11,7 @@ const Search = (props) => {
 
     useEffect(() => {
 
-        axios.get(`${process.env.REACT_APP_APIURL}/showMovies`)
+        axios.get(`${process.env.REACT_APP_APIURL}/searchByTitle`)
             .then(res => {
                 props.dispatch({ type: CALL_MOVIES, payload: res.data });
             }).catch((err) => {
