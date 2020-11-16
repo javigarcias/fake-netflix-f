@@ -19,7 +19,7 @@ const Search = (props) => {
                 console.log(err)
             });
         // eslint-disable-next-line
-    }, [])
+    }, [search])
 
 
 
