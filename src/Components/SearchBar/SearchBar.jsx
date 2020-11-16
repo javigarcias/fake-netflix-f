@@ -52,7 +52,7 @@ const Search = (props) => {
             userId: userLog.userId,
             movieId: movie.id
         };
-        await axios.post('http://localhost:3000/order/rent', orderBody);
+        await axios.post(`${process.env.REACT_APP_APIURL}/order/rent`, orderBody);
         history.push('/profile');
     };
 

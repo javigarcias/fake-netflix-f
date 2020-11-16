@@ -1,70 +1,85 @@
-# Getting Started with Create React App
+<p align="center">
+    <img src="src/imges/logo-readme-2.jpg" >	
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# App NETFLIX fake
+_Este proyecto consiste en la creación de una applicación tratando de emular la aplicación original de Netflix, donde el usuario, en lugar de ver una pelicula en streaming, podrá solicitar su alquiler._
 
-In the project directory, you can run:
+## Comenzando 🚀
 
-### `npm start`
+_Para poder poner en funcionamiento el proyecto en tu maquina local con propositos de desarrollo y pruebas necesitarás instalar las siguiente dependencias:_
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```
+npm init -y
+npm i sass react-router-dom axios dayjs antd react-redux react-slick slick-carousel
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```
+_Para ejecutar el programa en tu maquina local:_
 
-### `npm test`
+```
+npm start
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
 
-### `npm run build`
+### Components 📌
+- /Header:
+    - Este componente muestra las opciones de menú estandar una vez el usuario se logea.
+    
+- /MostrarCarrousel:
+    - Este componente muestra las peliculas en un carrusel dinámico, con las opciones de alquilar y ampliar información en cada pelicula.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- /MostrarPeliculas:
+    - Este componente muestra las peliculas en un formato cuadricula, donde cada pelicula tendrá la opción de ampliar su información que se desplegará en una ventana emergente, permitiendo la opción de alquilar dicha pelicula.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- /SearchBar:
+    - Es la zona donde introducimos la pelicula que se quiera buscar por su titulo. En el momento que se escriba en este espacio, irán apareciendo las peliculas que coinciden con lo escrito, dando la opción de alquilar.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Containers 📌
+- /Admin:
+    - Esta vista se activa en el Header automáticamente cuando el usuario logeado tiene el rol "admin". En esta vista, podrá visualizar todos los pedidos de todos los usuarios.
 
-### `npm run eject`
+- /Home:
+    - Esta vista es la pantalla principal de la App. Permite registrar un usuario nuevo introduciendo su email en la barra principal, y si este mail ya esta registrado, accede a la vista Login.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- /Homepage:
+    - Esta vista que aparece cuando un usuario se logea. Será la vista principal donde el usuario podrá alquilar peliculas o acceder a determinados menus de peliculas determinados por el genero, popularidad, infantil, etc...
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- /Login:
+    - En esta vista el usuario introduce sus credenciales para acceder a Homepage donde podrá alquilar peliculas o revisar sus pedidos.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- /Profile:
+    - Es la vista donde el usuario podrá acceder para revisar los pedidos realizados y sus datos de contacto.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- /Register:
+    - Desde esta vista el usuario que no este registrado podrá realizarlo introduciendo sus datos.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Ejecutando las pruebas 🚀
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+* [NETLIFY](https://fake-netflix-f.netlify.app/)
 
-### Code Splitting
+![](src/img/prueba-heroku.gif)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Construido con 🛠️
 
-### Analyzing the Bundle Size
+_Tecnologías utilizadas en el proyecto_
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Javascript
+- NodeJS
+- React
+- Redux
+- Netlify
+- Git
+- GitHub
+- GitFlow
 
-### Making a Progressive Web App
+## Autores ✒️
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+* **Javier García**  - [javigarcias](https://github.com/javigarcias)
+* **Rosa Sabater**  - [rosasabater](https://github.com/RosaSabater)
+* **Pablo Antonini**  - [antonini333](https://github.com/Antonini333)
 
-### Advanced Configuration
+* [TABLERO TRELLO](https://trello.com/b/8T6U3vMQ)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
