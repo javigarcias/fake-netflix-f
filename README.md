@@ -1,6 +1,4 @@
-<p align="center">
-    <img src="src/imges/logo-readme-2.jpg" >	
-</p>
+![](src/img/logo-readme.jpg)
 
 
 # App NETFLIX fake
@@ -54,12 +52,14 @@ npm start
 - /Register:
     - Desde esta vista el usuario que no este registrado podrá realizarlo introduciendo sus datos.
 
+## DEMO
+
+* [GIF](https://recordit.co/pCkwnzRHDT)
 
 ## Ejecutando las pruebas 🚀
 
 * [NETLIFY](https://fake-netflix-f.netlify.app/)
 
-![](src/img/prueba-heroku.gif)
 
 ## Construido con 🛠️
 
@@ -73,7 +73,7 @@ _Tecnologías utilizadas en el proyecto_
 - Git
 - GitHub
 - GitFlow
-
+* [Backend](https://github.com/RosaSabater/fake-netflix-b)
 ## Autores ✒️
 
 * **Javier García**  - [javigarcias](https://github.com/javigarcias)
