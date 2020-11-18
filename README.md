@@ -6,7 +6,7 @@ _Este proyecto consiste en la creación de una applicación tratando de emular l
 
 ## Comenzando 🚀
 
-_Para poder poner en funcionamiento el proyecto en tu maquina local con propositos de desarrollo y pruebas necesitarás instalar las siguiente dependencias:_
+_Para poder poner en funcionamiento el proyecto en tu máquina local con propositos de desarrollo y pruebas necesitarás instalar las siguiente dependencias:_
 
 ```
 npm init -y
